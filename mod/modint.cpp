@@ -2,10 +2,6 @@
 // template from maspy
 template <int mod>
 struct modint {
-  using u32 = unsigned int;
-  using ll = long long;
-  using u64 = unsigned long long;
-  using i128 = __int128;
   static constexpr u32 umod = u32(mod);
   static_assert(umod < u32(1) << 31);
   u32 val;
