@@ -1,3 +1,3 @@
 [![Actions Status](https://github.com/lovezah/library/workflows/verify/badge.svg)](https://github.com/lovezah/library/actions)
 
- [![Library docs](https://img.shields.io/static/v1?label=GitHub+Pages&message=+&color=brightgreen&logo=github)](https://lovezah.github.io/library/)
+ [![Library docs]](https://lovezah.github.io/library/)
