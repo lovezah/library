@@ -2,6 +2,10 @@
 // template from maspy
 template <int mod>
 struct modint {
+  using u32 = unsigned int;
+  using ll = long long;
+  using u64 = unsigned long long;
+  using i128 = __int128;
   static constexpr u32 umod = u32(mod);
   static_assert(umod < u32(1) << 31);
   u32 val;
@@ -79,7 +83,7 @@ struct modint {
     if (mod == 1053818881) return {20, 2789};
     return {-1, -1};
   }
-  static constexpr bool can_ntt() { return ntt_info().fi != -1; }
+  static constexpr bool can_ntt() { return ntt_info().f != -1; }
 };
 
 using mint = modint<1000000007>;
