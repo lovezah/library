@@ -2,21 +2,21 @@
 #include <algorithm>
 #include <iostream>
 #include <vector>
-#define rep(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
-#define all(x) std::begin(x), std::end(x)
+#define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
+#define ALL(x) std::begin(x), std::end(x)
 using namespace std;
 
 int main() {
     int n; cin >> n;
     vector<int> s(n);
-    rep(i, n) {
+    REP (i, n) {
         cin >> s[i];
     }
     int q; cin >> q;
     int cnt = 0;
     while (q --) {
         int t_i; cin >> t_i;
-        cnt += binary_search(all(s), t_i);
+        cnt += binary_search(ALL(s), t_i);
     }
     cout << cnt << endl;
     return 0;
