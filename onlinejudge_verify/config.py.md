@@ -39,7 +39,7 @@ data:
   - onlinejudge_verify/languages/cplusplus.py
   - onlinejudge_verify/languages/nim.py
   - onlinejudge_verify/languages/rust.py
-  timestamp: '2024-05-05 04:59:59+08:00'
+  timestamp: '2024-05-05 05:09:46+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: onlinejudge_verify/config.py

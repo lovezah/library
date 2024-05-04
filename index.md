@@ -129,6 +129,9 @@ data:
     - icon: ':warning:'
       path: setup.py
       title: setup.py
+    - icon: ':warning:'
+      path: test.cpp
+      title: test.cpp
   verificationCategories:
   - name: .
     pages:

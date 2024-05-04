@@ -36,7 +36,7 @@ data:
   isVerificationFile: false
   path: mod/binomial.cpp
   requiredBy: []
-  timestamp: '2024-05-05 04:59:59+08:00'
+  timestamp: '2024-05-05 05:09:46+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: mod/binomial.cpp

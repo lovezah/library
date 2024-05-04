@@ -265,13 +265,13 @@ data:
     \ ['--test', target['name']]\n    if target['kind'] == ['bench']:\n        return\
     \ ['--bench', target['name']]\n    return ['--lib']\n"
   dependsOn:
+  - onlinejudge_verify/languages/special_comments.py
   - onlinejudge_verify/config.py
   - onlinejudge_verify/languages/models.py
-  - onlinejudge_verify/languages/special_comments.py
   isVerificationFile: false
   path: onlinejudge_verify/languages/rust.py
   requiredBy: []
-  timestamp: '2024-05-05 04:59:59+08:00'
+  timestamp: '2024-05-05 05:09:46+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: onlinejudge_verify/languages/rust.py
