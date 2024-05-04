@@ -242,52 +242,7 @@ template <class... Ts> void print(Ts const &...ts) {
 // ------------------------------------- TEMPLATE ABOVE ------------------------------//
 
 void solve() {
-  LL(N, K, L);
-  vv(ll, adj1, N);
-  vv(ll, adj2, N);
-  FOR(i, K) {
-    INT(p, q); p--; q--;
-    adj1[p].pb(q);
-    adj1[q].pb(p);
-  }
-  FOR(i, L) {
-    INT(p, q); p--; q--;
-    adj2[p].pb(q);
-    adj2[q].pb(p);
-  }
-  vt<bool> seen(N);
-  vt<bool> vis(N);
-  vt<bool> vis2(N);
-  vt<ll> ANS(N);
-  FOR(x, N) if (!vis[x]) {
-    vt<int> who;
-    vis[x] = true;
-    seen[x] = true;
-    vt<int> que;
-    que.eb(x);
-    who.eb(x);
-    FOR(z, len(que)) {
-      int u = que[z];
-      for (auto v : adj1[u]) if (!vis[v]) {
-        vis[v] = true;
-        seen[v] = true;
-        que.eb(v);
-        who.eb(v);
-      }
-    }
-    for (int u : que) {
-      vt<int> q; q.eb(u);
-      vis2[u] = true;
-      for (auto v : adj2[u]) if (!vis2[v] && seen[v]) {
-        vis2[v] = true;
-        q.eb(v);
-      }
-      for (int v : q) ANS[v] = len(q);
-    }
-    for (auto w : who) seen[w] = vis2[w] = false;
-  }
-  FOR(i, N) write(ANS[i], ' ');
-  print();
+
 }
 
 int main() {
