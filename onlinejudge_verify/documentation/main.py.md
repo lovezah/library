@@ -74,14 +74,14 @@ data:
     \        path.parent.mkdir(parents=True, exist_ok=True)\n        with open(path,\
     \ 'wb') as fh:\n            fh.write(content)\n"
   dependsOn:
-  - onlinejudge_verify/documentation/configure.py
-  - onlinejudge_verify/documentation/build.py
   - onlinejudge_verify/documentation/type.py
+  - onlinejudge_verify/documentation/configure.py
   - onlinejudge_verify/marker.py
+  - onlinejudge_verify/documentation/build.py
   isVerificationFile: false
   path: onlinejudge_verify/documentation/main.py
   requiredBy: []
-  timestamp: '2024-05-05 05:09:46+08:00'
+  timestamp: '2024-05-05 05:59:32+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: onlinejudge_verify/documentation/main.py

@@ -40,7 +40,7 @@ data:
   path: onlinejudge_verify/documentation/type.py
   requiredBy:
   - onlinejudge_verify/documentation/main.py
-  timestamp: '2024-05-05 05:09:46+08:00'
+  timestamp: '2024-05-05 05:59:32+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: onlinejudge_verify/documentation/type.py

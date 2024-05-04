@@ -62,7 +62,7 @@ data:
   - onlinejudge_verify/languages/csharpscript.py
   - onlinejudge_verify/languages/rust.py
   - onlinejudge_verify/languages/python.py
-  timestamp: '2024-05-05 05:09:46+08:00'
+  timestamp: '2024-05-05 05:59:32+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: onlinejudge_verify/languages/models.py

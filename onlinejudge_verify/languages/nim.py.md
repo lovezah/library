@@ -70,12 +70,12 @@ data:
     \ must ba a list')\n                envs.append(NimLanguageEnvironment(compile_to=compile_to,\
     \ NIMFLAGS=NIMFLAGS))\n        return envs\n"
   dependsOn:
-  - onlinejudge_verify/config.py
   - onlinejudge_verify/languages/models.py
+  - onlinejudge_verify/config.py
   isVerificationFile: false
   path: onlinejudge_verify/languages/nim.py
   requiredBy: []
-  timestamp: '2024-05-05 05:09:46+08:00'
+  timestamp: '2024-05-05 05:59:32+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: onlinejudge_verify/languages/nim.py

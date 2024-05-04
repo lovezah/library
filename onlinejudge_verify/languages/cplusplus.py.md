@@ -137,14 +137,14 @@ data:
     \ _IGNORE_IF_CLANG in attributes:\n                continue\n            envs.append(env)\n\
     \        return envs\n"
   dependsOn:
-  - onlinejudge_verify/languages/cplusplus_bundle.py
   - onlinejudge_verify/languages/special_comments.py
-  - onlinejudge_verify/languages/models.py
   - onlinejudge_verify/config.py
+  - onlinejudge_verify/languages/models.py
+  - onlinejudge_verify/languages/cplusplus_bundle.py
   isVerificationFile: false
   path: onlinejudge_verify/languages/cplusplus.py
   requiredBy: []
-  timestamp: '2024-05-05 05:09:46+08:00'
+  timestamp: '2024-05-05 05:59:32+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: onlinejudge_verify/languages/cplusplus.py
