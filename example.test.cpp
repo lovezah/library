@@ -3,7 +3,7 @@
 #include <iostream>
 #include <vector>
 #define REP(i, n) for (int i = 0; (i) < (int)(n); ++ (i))
-#define ALL(x) std::begin(x), std::end(x)
+#define all(x) std::begin(x), std::end(x)
 using namespace std;
 
 int main() {
@@ -16,7 +16,7 @@ int main() {
     int cnt = 0;
     while (q --) {
         int t_i; cin >> t_i;
-        cnt += binary_search(ALL(s), t_i);
+        cnt += binary_search(all(s), t_i);
     }
     cout << cnt << endl;
     return 0;
