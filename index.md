@@ -14,19 +14,6 @@ data:
     - icon: ':warning:'
       path: mod/modint.cpp
       title: mod/modint.cpp
-  - name: .
-    pages:
-    - icon: ':warning:'
-      path: setup.py
-      title: setup.py
-    - icon: ':warning:'
-      path: test.cpp
-      title: test.cpp
-  verificationCategories:
-  - name: .
-    pages:
-    - icon: ':heavy_check_mark:'
-      path: example.test.cpp
-      title: example.test.cpp
+  verificationCategories: []
 layout: toppage
 ---
