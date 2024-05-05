@@ -4,12 +4,12 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
-  _pathExtension: cpp
+  _pathExtension: hpp
   _verificationStatusIcon: ':warning:'
   attributes:
     links:
     - https://codeforces.com/submissions/benq
-  bundledCode: "#line 1 \"misc/my_template.cpp\"\n#include <bits/stdc++.h>\n\nusing\
+  bundledCode: "#line 1 \"misc/my_template.hpp\"\n#include <bits/stdc++.h>\n\nusing\
     \ namespace std;\n\nusing db = double;\nusing ll = long long;\nusing u32 = unsigned\
     \ int;\nusing u64 = unsigned long long;\nusing i128 = __int128;\nusing str = string;\n\
     \nusing pi = pair<ll, ll>;\nusing vi = vector<ll>;\ntemplate <class T>\nusing\
@@ -221,15 +221,15 @@ data:
     \  return 0;  \n}\n"
   dependsOn: []
   isVerificationFile: false
-  path: misc/my_template.cpp
+  path: misc/my_template.hpp
   requiredBy: []
-  timestamp: '2024-05-04 13:47:43+08:00'
+  timestamp: '2024-05-06 00:16:12+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: misc/my_template.cpp
+documentation_of: misc/my_template.hpp
 layout: document
 redirect_from:
-- /library/misc/my_template.cpp
-- /library/misc/my_template.cpp.html
-title: misc/my_template.cpp
+- /library/misc/my_template.hpp
+- /library/misc/my_template.hpp.html
+title: misc/my_template.hpp
 ---

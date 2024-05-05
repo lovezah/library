@@ -4,8 +4,8 @@ data:
   - name: misc
     pages:
     - icon: ':warning:'
-      path: misc/my_template.cpp
-      title: misc/my_template.cpp
+      path: misc/my_template.hpp
+      title: misc/my_template.hpp
   - name: mod
     pages:
     - icon: ':warning:'
