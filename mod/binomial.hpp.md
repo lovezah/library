@@ -22,16 +22,16 @@ data:
     \ in; \n  }\n  static modint raw(u32 v) {\n    modint x;\n    x.val = v;\n   \
     \ return x;\n  }\n  constexpr modint() : val(0) {}\n  constexpr modint(u32 x)\
     \ : val(x % get_mod()) {}\n  constexpr modint(u64 x) : val(x % get_mod()) {}\n\
-    \  constexpr modint(int x) : val((x %= get_mod()) < 0 ? x + get_mod() : x){};\n\
-    \  constexpr modint(ll x) : val((x %= get_mod()) < 0 ? x + get_mod() : x){};\n\
-    \  constexpr modint(i128 x) : val((x %= get_mod()) < 0 ? x + get_mod() : x){};\n\
-    \  bool operator<(const modint &other) const { return val < other.val; }\n  modint\
-    \ &operator+=(const modint &p) {\n    if ((val += p.val) >= get_mod()) val -=\
-    \ get_mod();\n    return *this;\n  }\n  modint &operator-=(const modint &p) {\n\
-    \    if ((val += get_mod() - p.val) >= get_mod()) val -= get_mod();\n    return\
-    \ *this;\n  }\n  modint &operator*=(const modint &p) {\n    val = u64(val) * p.val\
-    \ % get_mod();\n    return *this;\n  }\n  modint &operator/=(const modint &p)\
-    \ {\n    *this *= p.inverse();\n    return *this;\n  }\n  modint operator-() const\
+    \  constexpr modint(int x) : val((x %= (int)get_mod()) < 0 ? x + (int)get_mod()\
+    \ : x){};\n  constexpr modint(ll x) : val((x %= (int)get_mod()) < 0 ? x + (int)get_mod()\
+    \ : x){};\n  constexpr modint(i128 x) : val((x %= (int)get_mod()) < 0 ? x + (int)get_mod()\
+    \ : x){};\n  bool operator<(const modint &other) const { return val < other.val;\
+    \ }\n  modint &operator+=(const modint &p) {\n    if ((val += p.val) >= get_mod())\
+    \ val -= get_mod();\n    return *this;\n  }\n  modint &operator-=(const modint\
+    \ &p) {\n    if ((val += get_mod() - p.val) >= get_mod()) val -= get_mod();\n\
+    \    return *this;\n  }\n  modint &operator*=(const modint &p) {\n    val = u64(val)\
+    \ * p.val % get_mod();\n    return *this;\n  }\n  modint &operator/=(const modint\
+    \ &p) {\n    *this *= p.inv();\n    return *this;\n  }\n  modint operator-() const\
     \ { return modint::raw(val ? get_mod() - val : u32(0)); }\n  modint operator+(const\
     \ modint &p) const { return modint(*this) += p; }\n  modint operator-(const modint\
     \ &p) const { return modint(*this) -= p; }\n  modint operator*(const modint &p)\
@@ -44,7 +44,7 @@ data:
     \  assert(n >= 0);\n    modint ret(1), mul(val);\n    while (n > 0) {\n      if\
     \ (n & 1) ret *= mul;\n      mul *= mul;\n      n >>= 1;\n    }\n    return ret;\n\
     \  }\n};\ntemplate <int mod>\nu32 modint<mod>::MOD;\n\ntemplate <> \nu32 modint<0>::MOD\
-    \ = 998244353;\n\nconstexpr int MOD = 1000000007;\n// constexpr int MOD = 998244353;\n\
+    \ = 1000000007;\n\nconstexpr int MOD = 1000000007;\n// constexpr int MOD = 998244353;\n\
     using mint = modint<MOD>;\n#line 4 \"mod/binomial.hpp\"\n\nstruct {\n  int n =\
     \ 0;\n  vt<mint> _fac, _ifac, _inv;\n\n  void init(int m) {\n    if (m <= n) return;\n\
     \    _fac.resize(m + 1);\n    _ifac.resize(m + 1);\n    _inv.resize(m + 1);\n\
@@ -74,7 +74,7 @@ data:
   isVerificationFile: false
   path: mod/binomial.hpp
   requiredBy: []
-  timestamp: '2024-05-06 00:09:25+08:00'
+  timestamp: '2024-05-06 06:11:10+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: mod/binomial.hpp
