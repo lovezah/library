@@ -1,12 +1,25 @@
 
+#pragma once
+
 // template from maspy
 template <int mod>
 struct modint {
   static constexpr u32 umod = u32(mod);
   static_assert(umod < u32(1) << 31);
   u32 val;
+  static u32 MOD;
+  constexpr static u32 get_mod() {
+    if (mod > 0) {
+      return umod;
+    } else {
+      return MOD;
+    }
+  }
+  constexpr static void set_mod(int x) {
+    MOD = u32(x);
+  }
   friend ostream& operator << (ostream& out, const modint& n) { 
-    return out << u32(n); 
+    return out << u32(n.val); 
   }
   friend istream& operator >> (istream& in, modint& n) { 
     ll v_; in >> v_; n = modint(v_); return in; 
@@ -17,29 +30,29 @@ struct modint {
     return x;
   }
   constexpr modint() : val(0) {}
-  constexpr modint(u32 x) : val(x % umod) {}
-  constexpr modint(u64 x) : val(x % umod) {}
-  constexpr modint(int x) : val((x %= mod) < 0 ? x + mod : x){};
-  constexpr modint(ll x) : val((x %= mod) < 0 ? x + mod : x){};
-  constexpr modint(i128 x) : val((x %= mod) < 0 ? x + mod : x){};
+  constexpr modint(u32 x) : val(x % get_mod()) {}
+  constexpr modint(u64 x) : val(x % get_mod()) {}
+  constexpr modint(int x) : val((x %= get_mod()) < 0 ? x + get_mod() : x){};
+  constexpr modint(ll x) : val((x %= get_mod()) < 0 ? x + get_mod() : x){};
+  constexpr modint(i128 x) : val((x %= get_mod()) < 0 ? x + get_mod() : x){};
   bool operator<(const modint &other) const { return val < other.val; }
   modint &operator+=(const modint &p) {
-    if ((val += p.val) >= umod) val -= umod;
+    if ((val += p.val) >= get_mod()) val -= get_mod();
     return *this;
   }
   modint &operator-=(const modint &p) {
-    if ((val += umod - p.val) >= umod) val -= umod;
+    if ((val += get_mod() - p.val) >= get_mod()) val -= get_mod();
     return *this;
   }
   modint &operator*=(const modint &p) {
-    val = u64(val) * p.val % umod;
+    val = u64(val) * p.val % get_mod();
     return *this;
   }
   modint &operator/=(const modint &p) {
     *this *= p.inverse();
     return *this;
   }
-  modint operator-() const { return modint::raw(val ? mod - val : u32(0)); }
+  modint operator-() const { return modint::raw(val ? get_mod() - val : u32(0)); }
   modint operator+(const modint &p) const { return modint(*this) += p; }
   modint operator-(const modint &p) const { return modint(*this) -= p; }
   modint operator*(const modint &p) const { return modint(*this) *= p; }
@@ -47,7 +60,7 @@ struct modint {
   bool operator==(const modint &p) const { return val == p.val; }
   bool operator!=(const modint &p) const { return val != p.val; }
   modint inv() const {
-    int a = val, b = mod, u = 1, v = 0, t;
+    int a = val, b = get_mod(), u = 1, v = 0, t;
     while (b > 0) {
       t = a / b;
       swap(a -= t * b, b), swap(u -= t * v, v);
@@ -64,23 +77,13 @@ struct modint {
     }
     return ret;
   }
-  static constexpr int get_mod() { return mod; }
-  // (n, r), r は 1 の 2^n 乗根
-  static constexpr pair<int, int> ntt_info() {
-    if (mod == 120586241) return {20, 74066978};
-    if (mod == 167772161) return {25, 17};
-    if (mod == 469762049) return {26, 30};
-    if (mod == 754974721) return {24, 362};
-    if (mod == 880803841) return {23, 211};
-    if (mod == 943718401) return {22, 663003469};
-    if (mod == 998244353) return {23, 31};
-    if (mod == 1045430273) return {20, 363};
-    if (mod == 1051721729) return {20, 330};
-    if (mod == 1053818881) return {20, 2789};
-    return {-1, -1};
-  }
-  static constexpr bool can_ntt() { return ntt_info().f != -1; }
 };
+template <int mod>
+u32 modint<mod>::MOD;
 
-using mint = modint<1000000007>;
-// using mint = modint<998244353>;
+template <> 
+u32 modint<0>::MOD = 998244353;
+
+constexpr int MOD = 1000000007;
+// constexpr int MOD = 998244353;
+using mint = modint<MOD>;

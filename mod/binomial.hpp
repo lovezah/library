@@ -1,4 +1,8 @@
 
+#pragma once
+
+#include "mod/modint.hpp"
+
 struct {
   int n = 0;
   vt<mint> _fac, _ifac, _inv;
