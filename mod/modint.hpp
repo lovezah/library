@@ -48,7 +48,7 @@ struct modint {
     return *this;
   }
   modint &operator/=(const modint &p) {
-    *this *= p.inverse();
+    *this *= p.inv();
     return *this;
   }
   modint operator-() const { return modint::raw(val ? get_mod() - val : u32(0)); }
