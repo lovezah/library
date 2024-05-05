@@ -31,9 +31,9 @@ struct modint {
   constexpr modint() : val(0) {}
   constexpr modint(u32 x) : val(x % get_mod()) {}
   constexpr modint(u64 x) : val(x % get_mod()) {}
-  constexpr modint(int x) : val((x %= get_mod()) < 0 ? x + get_mod() : x){};
-  constexpr modint(ll x) : val((x %= get_mod()) < 0 ? x + get_mod() : x){};
-  constexpr modint(i128 x) : val((x %= get_mod()) < 0 ? x + get_mod() : x){};
+  constexpr modint(int x) : val((x %= (int)get_mod()) < 0 ? x + (int)get_mod() : x){};
+  constexpr modint(ll x) : val((x %= (int)get_mod()) < 0 ? x + (int)get_mod() : x){};
+  constexpr modint(i128 x) : val((x %= (int)get_mod()) < 0 ? x + (int)get_mod() : x){};
   bool operator<(const modint &other) const { return val < other.val; }
   modint &operator+=(const modint &p) {
     if ((val += p.val) >= get_mod()) val -= get_mod();
@@ -81,7 +81,7 @@ template <int mod>
 u32 modint<mod>::MOD;
 
 template <> 
-u32 modint<0>::MOD = 998244353;
+u32 modint<0>::MOD = 1000000007;
 
 constexpr int MOD = 1000000007;
 // constexpr int MOD = 998244353;
