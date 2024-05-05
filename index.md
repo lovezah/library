@@ -9,11 +9,11 @@ data:
   - name: mod
     pages:
     - icon: ':warning:'
-      path: mod/binomial.cpp
-      title: mod/binomial.cpp
+      path: mod/binomial.hpp
+      title: mod/binomial.hpp
     - icon: ':warning:'
-      path: mod/modint.cpp
-      title: mod/modint.cpp
+      path: mod/modint.hpp
+      title: mod/modint.hpp
   verificationCategories: []
 layout: toppage
 ---
