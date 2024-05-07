@@ -48,8 +48,8 @@ data:
     using mint = modint<MOD>;\n#line 4 \"mod/binomial.hpp\"\n\nstruct {\n  int n =\
     \ 0;\n  vt<mint> _fac, _ifac, _inv;\n\n  void init(int m) {\n    if (m <= n) return;\n\
     \    _fac.resize(m + 1);\n    _ifac.resize(m + 1);\n    _inv.resize(m + 1);\n\
-    \    _fac[0] = 1;\n    FOR(i, n + 1, m + 1) {\n      _fac[i] = _fac[i - 1] * i;\n\
-    \    }\n    _ifac[m] = _fac[m].inv();\n    FOR_R(i, n + 1, m + 1) {\n      _ifac[i\
+    \    _fac[0] = 1;\n    rep(i, n + 1, m + 1) {\n      _fac[i] = _fac[i - 1] * i;\n\
+    \    }\n    _ifac[m] = _fac[m].inv();\n    per(i, n + 1, m + 1) {\n      _ifac[i\
     \ - 1] = _ifac[i] * i;\n      _inv[i] = _ifac[i] * _fac[i - 1];\n    }\n    n\
     \ = m;\n  }\n  mint fac(int m) {\n    if (m >= n) init(m | 1);\n    return _fac[m];\n\
     \  }\n  mint ifac(int m) {\n    if (m >= n) init(m | 1);\n    return _ifac[m];\n\
@@ -60,8 +60,8 @@ data:
   code: "#pragma once\n\n#include \"mod/modint.hpp\"\n\nstruct {\n  int n = 0;\n \
     \ vt<mint> _fac, _ifac, _inv;\n\n  void init(int m) {\n    if (m <= n) return;\n\
     \    _fac.resize(m + 1);\n    _ifac.resize(m + 1);\n    _inv.resize(m + 1);\n\
-    \    _fac[0] = 1;\n    FOR(i, n + 1, m + 1) {\n      _fac[i] = _fac[i - 1] * i;\n\
-    \    }\n    _ifac[m] = _fac[m].inv();\n    FOR_R(i, n + 1, m + 1) {\n      _ifac[i\
+    \    _fac[0] = 1;\n    rep(i, n + 1, m + 1) {\n      _fac[i] = _fac[i - 1] * i;\n\
+    \    }\n    _ifac[m] = _fac[m].inv();\n    per(i, n + 1, m + 1) {\n      _ifac[i\
     \ - 1] = _ifac[i] * i;\n      _inv[i] = _ifac[i] * _fac[i - 1];\n    }\n    n\
     \ = m;\n  }\n  mint fac(int m) {\n    if (m >= n) init(m | 1);\n    return _fac[m];\n\
     \  }\n  mint ifac(int m) {\n    if (m >= n) init(m | 1);\n    return _ifac[m];\n\
@@ -74,7 +74,7 @@ data:
   isVerificationFile: false
   path: mod/binomial.hpp
   requiredBy: []
-  timestamp: '2024-05-06 06:11:10+08:00'
+  timestamp: '2024-05-07 18:00:17+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: mod/binomial.hpp
