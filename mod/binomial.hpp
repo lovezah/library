@@ -12,11 +12,11 @@ struct {
     _ifac.resize(m + 1);
     _inv.resize(m + 1);
     _fac[0] = 1;
-    FOR(i, n + 1, m + 1) {
+    rep(i, n + 1, m + 1) {
       _fac[i] = _fac[i - 1] * i;
     }
     _ifac[m] = _fac[m].inv();
-    FOR_R(i, n + 1, m + 1) {
+    per(i, n + 1, m + 1) {
       _ifac[i - 1] = _ifac[i] * i;
       _inv[i] = _ifac[i] * _fac[i - 1];
     }

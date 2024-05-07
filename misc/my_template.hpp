@@ -36,18 +36,18 @@ constexpr T infty = numeric_limits<T>::max() / 2;
       a, vector<vector<vector<type>>>(       \
              b, vector<vector<type>>(c, vector<type>(__VA_ARGS__))))
 
-#define FOR1(n) for (ll _ = 0; _ < ll(n); _++)
-#define FOR2(i, n) for (ll i = 0; i < ll(n); i++)
-#define FOR3(i, a, n) for (ll i = a; i < ll(n); i++)
-#define FOR4(i, a, n, s) for (ll i = a; i < ll(n); i += (s))
-#define FOR1_R(n) for (ll i = (n) - 1; i >= ll(0); i--)
-#define FOR2_R(i, n) for (ll i = (n) - 1; i >= ll(0); i--)
-#define FOR3_R(i, n, b) for (ll i = (b) - 1; i >= ll(n); i--)
-#define FOR4_R(i, n, b, s) for (ll i = (b) - 1; i >= ll(n); i -= (s))
+#define rep1(n) for (ll _ = 0; _ < ll(n); _++)
+#define rep2(i, n) for (ll i = 0; i < ll(n); i++)
+#define rep3(i, a, n) for (ll i = a; i < ll(n); i++)
+#define rep4(i, a, n, s) for (ll i = a; i < ll(n); i += (s))
+#define per1(n) for (ll i = (n) - 1; i >= ll(0); i--)
+#define per2(i, n) for (ll i = (n) - 1; i >= ll(0); i--)
+#define per3(i, n, b) for (ll i = (b) - 1; i >= ll(n); i--)
+#define per4(i, n, b, s) for (ll i = (b) - 1; i >= ll(n); i -= (s))
 #define overload4(a, b, c, d, e, ...) e
-#define FOR(...) overload4(__VA_ARGS__, FOR4, FOR3, FOR2, FOR1)(__VA_ARGS__)
-#define FOR_R(...) overload4(__VA_ARGS__, FOR4_R, FOR3_R, FOR2_R, FOR1_R)(__VA_ARGS__)
-#define FOR_subset(i, x) for (ll i = (x); i >= 0; i = (i == 0 ? -1 : (i - 1) & (x)))
+#define rep(...) overload4(__VA_ARGS__, rep4, rep3, rep2, rep1)(__VA_ARGS__)
+#define per(...) overload4(__VA_ARGS__, per4, per3, per2, rep1_R)(__VA_ARGS__)
+#define for_subset(i, x) for (ll i = (x); i >= 0; i = (i == 0 ? -1 : (i - 1) & (x)))
 
 #define pb push_back
 #define eb emplace_back
@@ -65,38 +65,19 @@ int topbit(ll x) { return (x == 0 ? -1 : 63 - __builtin_clzll(x)); }
 int lobit(int x) { return (x == 0 ? -1 : __builtin_ctz(x)); }
 int lobit(ll x) { return (x == 0 ? -1 : __builtin_ctzll(x)); }
 
-template <class T, class U>
-T SUM(vt<U> &A) {
-  T res = 0;
-  for (auto &&a : A) res += a;
-  return res;
-}
-#define MIN(x) *min_element(all(x))
-#define MAX(x) *max_element(all(x))
-#define LB(x, v) lower_bound(all(x), v)
-#define UB(x, v) upper_bound(all(x), v)
-#define ILB(x, v) distance(x.begin(), LB(x, v))
-#define IUB(x, v) distance(x.begin(), UB(x, v))
-#define SORT(x) sort(all(x))
-#define UNIQUE(x) SORT(x), x.resize(unique(all(x)) - x.begin())
+#define lb(x, v) lower_bound(all(x), v)
+#define ub(x, v) upper_bound(all(x), v)
+#define lwb(x, v) distance(x.begin(), lb(x, v))
+#define upb(x, v) distance(x.begin(), ub(x, v))
+#define rem_dup(x) sort(all(x)), x.erase(unique(all(x)), x.end())
 
 template <class T, class U>
 bool ckmax(T &a, U b) { return (a < b ? a = b, true : false); }
 template <class T, class U>
 bool ckmin(T &a, U b) { return (a > b ? a = b, true : false); }
-template <class T>
-T POP(queue<T> &que) { T a = que.front(); que.pop(); return a; }
-template <class T>
-T POP(vt<T> &que) { T a = que.back(); que.pop_back(); return a; }
-template <class T>
-T POP(pq<T> &que) { T a = que.top(); que.pop(); return a; }
-template <class T>
-T POP(pqg<T> &que) { T a = que.top(); que.pop(); return a; }
-template <class T = char>
-T POP(str &que) { T a = que.back(); que.pop_back(); return a; }
 
 template <typename F>
-ll FIRST_TRUE(F check, ll lo, ll hi) {
+ll first_true(F check, ll lo, ll hi) {
   ++hi;
   while (lo < hi) {
     ll mi = lo + (hi - lo) / 2;
@@ -105,7 +86,7 @@ ll FIRST_TRUE(F check, ll lo, ll hi) {
   return lo;
 }
 template <typename F>
-ll LAST_TRUE(F check, ll lo, ll hi) {
+ll last_true(F check, ll lo, ll hi) {
   --lo;
   while (lo < hi) {
     ll mi = lo + (hi - lo + 1) / 2;
@@ -115,7 +96,7 @@ ll LAST_TRUE(F check, ll lo, ll hi) {
 }
 template <typename F>
 db binary_search_real(F check, db lo, db hi, int iter = 100) {
-  FOR(iter) {
+  rep(iter) {
     db mi = (lo + hi) / 2;
     (check(mi) ? lo : hi) = mi;
   }
@@ -125,7 +106,7 @@ template <typename T, typename U>
 vt<T> cumsum(vt<U> &A, int offset = 1) {
   int N = len(A);
   vt<T> B(N + 1);
-  FOR(i, N) B[i + 1] = B[i] + A[i];
+  rep(i, N) B[i + 1] = B[i] + A[i];
   if (offset == 0) B.erase(B.begin());
   return B;
 }
@@ -138,7 +119,7 @@ vi argsort(vt<T> &A) {
 }
 vi s_to_vi(const str &S, char first_char) {
   vi res(len(S));
-  FOR(i, len(S)) res[i] = (S[i] != '?' ? S[i] - first_char : -1); 
+  rep(i, len(S)) res[i] = (S[i] != '?' ? S[i] - first_char : -1); 
   return res;
 }
 void SETIO() {
@@ -218,36 +199,71 @@ template <class... Ts> void print(Ts const &...ts) {
   Writer<cout, false, true>{}.print_with_sep(" ", ts...);
 }
 }
-#define INT(...)   \
+inline namespace Debug {
+template <typename... Args> void err(Args... args) {
+	Writer<cerr, true, false>{}.print_with_sep(" | ", args...);
+}
+template <typename... Args> void errn(Args... args) {
+	Writer<cerr, true, true>{}.print_with_sep(" | ", args...);
+}
+
+void err_prefix(str func, int line, string args) {
+	cerr << "\033[0;31m\u001b[1mDEBUG\033[0m"
+	     << " | "
+	     << "\u001b[34m" << func << "\033[0m"
+	     << ":"
+	     << "\u001b[34m" << line << "\033[0m"
+	     << " - "
+	     << "[" << args << "] = ";
+}
+
+#ifdef LOCAL
+#define dbg(args...) err_prefix(__FUNCTION__, __LINE__, #args), err(args)
+#define dbgn(args...) err_prefix(__FUNCTION__, __LINE__, #args), errn(args)
+#else
+#define dbg(...)
+#define dbgn(args...)
+#endif
+
+const auto beg_time = std::chrono::high_resolution_clock::now();
+// https://stackoverflow.com/questions/47980498/accurate-c-c-clock-on-a-multi-core-processor-with-auto-overclock?noredirect=1&lq=1
+double time_elapsed() {
+	return chrono::duration<double>(std::chrono::high_resolution_clock::now() -
+	                                beg_time)
+	    .count();
+}
+}  // namespace Debug
+
+#define ints(...)   \
   int __VA_ARGS__; \
   read(__VA_ARGS__)
-#define LL(...)   \
+#define lls(...)   \
   ll __VA_ARGS__; \
   read(__VA_ARGS__)
-#define STR(...)      \
+#define strs(...)      \
   string __VA_ARGS__; \
   read(__VA_ARGS__)
-#define CHAR(...)   \
+#define chars(...)   \
   char __VA_ARGS__; \
   read(__VA_ARGS__)
-#define DBL(...)      \
+#define dbs(...)      \
   double __VA_ARGS__; \
   read(__VA_ARGS__)
-#define VEC(type, name, size) \
+#define read_vec(type, name, size) \
   vector<type> name(size);    \
   read(name)
-#define VV(type, name, h, w)                     \
+#define read_vv(type, name, h, w)                     \
   vector<vector<type>> name(h, vector<type>(w)); \
   read(name)
 // ------------------------------------- TEMPLATE ABOVE ------------------------------//
 
 void solve() {
-
+  
 }
 
 int main() {
   SETIO();
-  // INT(t); FOR(t)
+  // ints(t); rep(t)
   solve();
   return 0;  
 }
