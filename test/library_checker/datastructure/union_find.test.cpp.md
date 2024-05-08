@@ -1,24 +1,24 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: ds/union_find.hpp
     title: ds/union_find.hpp
-  - icon: ':x:'
-    path: misc/my_template.hpp
-    title: misc/my_template.hpp
+  - icon: ':heavy_check_mark:'
+    path: misc/my_template_test.hpp
+    title: misc/my_template_test.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/unionfind
     links:
     - https://judge.yosupo.jp/problem/unionfind
   bundledCode: "#line 1 \"test/library_checker/datastructure/union_find.test.cpp\"\
-    \n#define PROBLEM \"https://judge.yosupo.jp/problem/unionfind\"\n#line 1 \"misc/my_template.hpp\"\
+    \n#define PROBLEM \"https://judge.yosupo.jp/problem/unionfind\"\n#line 1 \"misc/my_template_test.hpp\"\
     \n#include <bits/stdc++.h>\n\nusing namespace std;\n\nusing db = double;\nusing\
     \ ll = long long;\nusing u32 = unsigned int;\nusing u64 = unsigned long long;\n\
     using i128 = __int128;\nusing str = string;\n\nusing pi = pair<ll, ll>;\nusing\
@@ -127,8 +127,7 @@ data:
     \ \\\n  vector<type> name(size);    \\\n  read(name)\n#define read_vv(type, name,\
     \ h, w)                     \\\n  vector<vector<type>> name(h, vector<type>(w));\
     \ \\\n  read(name)\n// ------------------------------------- TEMPLATE ABOVE ------------------------------//\n\
-    \nvoid solve() {\n\n}\n\nint main() {\n  SETIO();\n//ints(n); rep(n)\n  solve();\n\
-    }\n#line 2 \"ds/union_find.hpp\"\n\nstruct union_find {\n  int n, comp;\n  vt<int>\
+    \n#line 2 \"ds/union_find.hpp\"\n\nstruct union_find {\n  int n, comp;\n  vt<int>\
     \ p;\n  union_find(int m = 0) {\n    init(m);\n  }\n  void init(int m) {\n   \
     \ n = m;\n    comp = m;\n    p.assign(n, -1);\n  }\n  void reset() { init(n);\
     \ }\n  int operator[](int x) {\n    while (p[x] >= 0) {\n      if (p[p[x]] >=\
@@ -142,18 +141,18 @@ data:
     \ u, v);\n    if (t == 0) {\n      uf.merge(u, v);\n    } else print(uf[u] ==\
     \ uf[v] ? 1 : 0);\n  }\n}\n\nint main() {\n  SETIO();\n  solve();\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/unionfind\"\n#include \"\
-    misc/my_template.hpp\"\n#include \"ds/union_find.hpp\"\n\nvoid solve() {\n  ints(n,\
-    \ q);\n  union_find uf(n);\n  rep(q) {\n    ints(t, u, v);\n    if (t == 0) {\n\
-    \      uf.merge(u, v);\n    } else print(uf[u] == uf[v] ? 1 : 0);\n  }\n}\n\n\
-    int main() {\n  SETIO();\n  solve();\n}"
+    misc/my_template_test.hpp\"\n#include \"ds/union_find.hpp\"\n\nvoid solve() {\n\
+    \  ints(n, q);\n  union_find uf(n);\n  rep(q) {\n    ints(t, u, v);\n    if (t\
+    \ == 0) {\n      uf.merge(u, v);\n    } else print(uf[u] == uf[v] ? 1 : 0);\n\
+    \  }\n}\n\nint main() {\n  SETIO();\n  solve();\n}\n"
   dependsOn:
-  - misc/my_template.hpp
+  - misc/my_template_test.hpp
   - ds/union_find.hpp
   isVerificationFile: true
   path: test/library_checker/datastructure/union_find.test.cpp
   requiredBy: []
-  timestamp: '2024-05-08 17:48:11+08:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-05-08 17:49:38+08:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/datastructure/union_find.test.cpp
 layout: document

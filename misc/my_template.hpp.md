@@ -2,13 +2,10 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith:
-  - icon: ':x:'
-    path: test/library_checker/datastructure/union_find.test.cpp
-    title: test/library_checker/datastructure/union_find.test.cpp
-  _isVerificationFailed: true
+  _extendedVerifiedWith: []
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     links:
     - https://codeforces.com/submissions/benq
@@ -239,9 +236,8 @@ data:
   path: misc/my_template.hpp
   requiredBy: []
   timestamp: '2024-05-08 17:48:11+08:00'
-  verificationStatus: LIBRARY_ALL_WA
-  verifiedWith:
-  - test/library_checker/datastructure/union_find.test.cpp
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
 documentation_of: misc/my_template.hpp
 layout: document
 redirect_from:
