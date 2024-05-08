@@ -257,12 +257,3 @@ double time_elapsed() {
   read(name)
 // ------------------------------------- TEMPLATE ABOVE ------------------------------//
 
-void solve() {
-
-}
-
-int main() {
-  SETIO();
-//ints(n); rep(n)
-  solve();
-}
