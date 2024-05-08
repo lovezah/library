@@ -8,7 +8,7 @@ data:
       title: ds/union_find.cpp
   - name: misc
     pages:
-    - icon: ':x:'
+    - icon: ':warning:'
       path: misc/my_template.hpp
       title: misc/my_template.hpp
   - name: mod
