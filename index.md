@@ -3,12 +3,12 @@ data:
   libraryCategories:
   - name: ds
     pages:
-    - icon: ':warning:'
-      path: ds/union_find.cpp
-      title: ds/union_find.cpp
+    - icon: ':heavy_check_mark:'
+      path: ds/union_find.hpp
+      title: ds/union_find.hpp
   - name: misc
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: misc/my_template.hpp
       title: misc/my_template.hpp
   - name: mod
@@ -22,7 +22,7 @@ data:
   verificationCategories:
   - name: test/library_checker/datastructure
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/datastructure/union_find.test.cpp
       title: test/library_checker/datastructure/union_find.test.cpp
 layout: toppage
