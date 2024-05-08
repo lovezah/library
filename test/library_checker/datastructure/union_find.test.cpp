@@ -1,5 +1,5 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/unionfind"
-#include "misc/my_template.hpp"
+#include "misc/my_template_test.hpp"
 #include "ds/union_find.hpp"
 
 void solve() {
