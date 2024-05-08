@@ -8,7 +8,7 @@ data:
       title: ds/union_find.cpp
   - name: misc
     pages:
-    - icon: ':warning:'
+    - icon: ':x:'
       path: misc/my_template.hpp
       title: misc/my_template.hpp
   - name: mod
@@ -19,6 +19,11 @@ data:
     - icon: ':warning:'
       path: mod/modint.hpp
       title: mod/modint.hpp
-  verificationCategories: []
+  verificationCategories:
+  - name: test/library_checker/datastructure
+    pages:
+    - icon: ':x:'
+      path: test/library_checker/datastructure/union_find.test.cpp
+      title: test/library_checker/datastructure/union_find.test.cpp
 layout: toppage
 ---
