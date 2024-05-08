@@ -1,5 +1,6 @@
-#include <misc/my_template.hpp>
-#include <ds/union_find.hpp>
+#define PROBLEM "https://judge.yosupo.jp/problem/unionfind"
+#include "misc/my_template.hpp"
+#include "ds/union_find.hpp"
 
 void solve() {
   ints(n, q);
