@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: test/library_checker/datastructure/union_find.test.cpp
     title: test/library_checker/datastructure/union_find.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 2 \"ds/union_find.hpp\"\n\nstruct union_find {\n  int n, comp;\n\
@@ -36,7 +36,7 @@ data:
   path: ds/union_find.hpp
   requiredBy: []
   timestamp: '2024-05-08 17:37:43+08:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - test/library_checker/datastructure/union_find.test.cpp
 documentation_of: ds/union_find.hpp

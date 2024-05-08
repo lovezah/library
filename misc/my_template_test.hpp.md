@@ -2,68 +2,65 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith:
-  - icon: ':x:'
-    path: test/library_checker/datastructure/union_find.test.cpp
-    title: test/library_checker/datastructure/union_find.test.cpp
-  _isVerificationFailed: true
+  _extendedVerifiedWith: []
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     links:
     - https://codeforces.com/submissions/benq
     - https://stackoverflow.com/questions/47980498/accurate-c-c-clock-on-a-multi-core-processor-with-auto-overclock?noredirect=1&lq=1
-  bundledCode: "#line 1 \"misc/my_template.hpp\"\n#include <bits/stdc++.h>\n\nusing\
-    \ namespace std;\n\nusing db = double;\nusing ll = long long;\nusing u32 = unsigned\
-    \ int;\nusing u64 = unsigned long long;\nusing i128 = __int128;\nusing str = string;\n\
-    \nusing pi = pair<ll, ll>;\nusing vi = vector<ll>;\ntemplate <class T>\nusing\
-    \ vt = vector<T>;\ntemplate <class T>\nusing vvt = vector<vt<T>>;\ntemplate <class\
-    \ T>\nusing vvvt = vector<vvt<T>>;\ntemplate <class T>\nusing vvvvt = vector<vvvt<T>>;\n\
-    template <class T>\nusing pq = priority_queue<T>;\ntemplate <class T>\nusing pqg\
-    \ = priority_queue<T, vector<T>, greater<T>>;\ntemplate <class T>\nconstexpr T\
-    \ infty = numeric_limits<T>::max() / 2;\n\n#define vv(type, name, h, ...) \\\n\
-    \  vector<vector<type>> name(h, vector<type>(__VA_ARGS__))\n#define vvv(type,\
-    \ name, h, w, ...)   \\\n  vector<vector<vector<type>>> name( \\\n      h, vector<vector<type>>(w,\
-    \ vector<type>(__VA_ARGS__)))\n#define vvvv(type, name, a, b, c, ...)       \\\
-    \n  vector<vector<vector<vector<type>>>> name( \\\n      a, vector<vector<vector<type>>>(\
-    \       \\\n             b, vector<vector<type>>(c, vector<type>(__VA_ARGS__))))\n\
-    \n#define rep1(n) for (ll _ = 0; _ < ll(n); _++)\n#define rep2(i, n) for (ll i\
-    \ = 0; i < ll(n); i++)\n#define rep3(i, a, n) for (ll i = a; i < ll(n); i++)\n\
-    #define rep4(i, a, n, s) for (ll i = a; i < ll(n); i += (s))\n#define per1(n)\
-    \ for (ll i = (n) - 1; i >= ll(0); i--)\n#define per2(i, n) for (ll i = (n) -\
-    \ 1; i >= ll(0); i--)\n#define per3(i, n, b) for (ll i = (b) - 1; i >= ll(n);\
-    \ i--)\n#define per4(i, n, b, s) for (ll i = (b) - 1; i >= ll(n); i -= (s))\n\
-    #define overload4(a, b, c, d, e, ...) e\n#define rep(...) overload4(__VA_ARGS__,\
-    \ rep4, rep3, rep2, rep1)(__VA_ARGS__)\n#define per(...) overload4(__VA_ARGS__,\
-    \ per4, per3, per2, rep1_R)(__VA_ARGS__)\n#define for_subset(i, x) for (ll i =\
-    \ (x); i >= 0; i = (i == 0 ? -1 : (i - 1) & (x)))\n\n#define pb push_back\n#define\
-    \ eb emplace_back\n#define mp make_pair\n#define mt make_tuple\n#define f first\n\
-    #define s second\n#define all(x) (x).begin(), (x).end()\n#define len(x) ll(x.size())\n\
-    \nint popcount(int x) { return __builtin_popcount(x); }\nint popcount(ll x) {\
-    \ return __builtin_popcountll(x); }\nint topbit(int x) { return (x == 0 ? -1 :\
-    \ 31 - __builtin_clz(x)); }\nint topbit(ll x) { return (x == 0 ? -1 : 63 - __builtin_clzll(x));\
-    \ }\nint lobit(int x) { return (x == 0 ? -1 : __builtin_ctz(x)); }\nint lobit(ll\
-    \ x) { return (x == 0 ? -1 : __builtin_ctzll(x)); }\n\n#define lb(x, v) lower_bound(all(x),\
-    \ v)\n#define ub(x, v) upper_bound(all(x), v)\n#define lwb(x, v) distance(x.begin(),\
-    \ lb(x, v))\n#define upb(x, v) distance(x.begin(), ub(x, v))\n#define rem_dup(x)\
-    \ sort(all(x)), x.erase(unique(all(x)), x.end())\n\ntemplate <class T, class U>\n\
-    bool ckmax(T &a, U b) { return (a < b ? a = b, true : false); }\ntemplate <class\
-    \ T, class U>\nbool ckmin(T &a, U b) { return (a > b ? a = b, true : false); }\n\
-    \ntemplate <typename F>\nll first_true(F check, ll lo, ll hi) {\n  ++hi;\n  while\
-    \ (lo < hi) {\n    ll mi = lo + (hi - lo) / 2;\n    check(mi) ? hi = mi : lo =\
-    \ mi + 1;\n  }\n  return lo;\n}\ntemplate <typename F>\nll last_true(F check,\
-    \ ll lo, ll hi) {\n  --lo;\n  while (lo < hi) {\n    ll mi = lo + (hi - lo + 1)\
-    \ / 2;\n    check(mi) ? lo = mi : hi = mi - 1;\n  }\n  return lo;\n}\ntemplate\
-    \ <typename F>\ndb binary_search_real(F check, db lo, db hi, int iter = 100) {\n\
-    \  rep(iter) {\n    db mi = (lo + hi) / 2;\n    (check(mi) ? lo : hi) = mi;\n\
-    \  }\n  return (lo + hi) / 2;\n}\ntemplate <typename T, typename U>\nvt<T> cumsum(vt<U>\
-    \ &A, int offset = 1) {\n  int N = len(A);\n  vt<T> B(N + 1);\n  rep(i, N) B[i\
-    \ + 1] = B[i] + A[i];\n  if (offset == 0) B.erase(B.begin());\n  return B;\n}\n\
-    template <typename T>\nvi argsort(vt<T> &A) {\n  vi ids(len(A));\n  iota(all(ids),\
-    \ 0);\n  sort(all(ids), [&](int i, int j) { return A[i] == A[j] ? i < j : A[i]\
-    \ < A[j]; });\n  return ids;\n}\nvi s_to_vi(const str &S, char first_char) {\n\
-    \  vi res(len(S));\n  rep(i, len(S)) res[i] = (S[i] != '?' ? S[i] - first_char\
-    \ : -1); \n  return res;\n}\nvoid SETIO() {\n  cin.tie(nullptr)->sync_with_stdio(false);\n\
+  bundledCode: "#line 1 \"misc/my_template_test.hpp\"\n#include <bits/stdc++.h>\n\n\
+    using namespace std;\n\nusing db = double;\nusing ll = long long;\nusing u32 =\
+    \ unsigned int;\nusing u64 = unsigned long long;\nusing i128 = __int128;\nusing\
+    \ str = string;\n\nusing pi = pair<ll, ll>;\nusing vi = vector<ll>;\ntemplate\
+    \ <class T>\nusing vt = vector<T>;\ntemplate <class T>\nusing vvt = vector<vt<T>>;\n\
+    template <class T>\nusing vvvt = vector<vvt<T>>;\ntemplate <class T>\nusing vvvvt\
+    \ = vector<vvvt<T>>;\ntemplate <class T>\nusing pq = priority_queue<T>;\ntemplate\
+    \ <class T>\nusing pqg = priority_queue<T, vector<T>, greater<T>>;\ntemplate <class\
+    \ T>\nconstexpr T infty = numeric_limits<T>::max() / 2;\n\n#define vv(type, name,\
+    \ h, ...) \\\n  vector<vector<type>> name(h, vector<type>(__VA_ARGS__))\n#define\
+    \ vvv(type, name, h, w, ...)   \\\n  vector<vector<vector<type>>> name( \\\n \
+    \     h, vector<vector<type>>(w, vector<type>(__VA_ARGS__)))\n#define vvvv(type,\
+    \ name, a, b, c, ...)       \\\n  vector<vector<vector<vector<type>>>> name( \\\
+    \n      a, vector<vector<vector<type>>>(       \\\n             b, vector<vector<type>>(c,\
+    \ vector<type>(__VA_ARGS__))))\n\n#define rep1(n) for (ll _ = 0; _ < ll(n); _++)\n\
+    #define rep2(i, n) for (ll i = 0; i < ll(n); i++)\n#define rep3(i, a, n) for (ll\
+    \ i = a; i < ll(n); i++)\n#define rep4(i, a, n, s) for (ll i = a; i < ll(n); i\
+    \ += (s))\n#define per1(n) for (ll i = (n) - 1; i >= ll(0); i--)\n#define per2(i,\
+    \ n) for (ll i = (n) - 1; i >= ll(0); i--)\n#define per3(i, n, b) for (ll i =\
+    \ (b) - 1; i >= ll(n); i--)\n#define per4(i, n, b, s) for (ll i = (b) - 1; i >=\
+    \ ll(n); i -= (s))\n#define overload4(a, b, c, d, e, ...) e\n#define rep(...)\
+    \ overload4(__VA_ARGS__, rep4, rep3, rep2, rep1)(__VA_ARGS__)\n#define per(...)\
+    \ overload4(__VA_ARGS__, per4, per3, per2, rep1_R)(__VA_ARGS__)\n#define for_subset(i,\
+    \ x) for (ll i = (x); i >= 0; i = (i == 0 ? -1 : (i - 1) & (x)))\n\n#define pb\
+    \ push_back\n#define eb emplace_back\n#define mp make_pair\n#define mt make_tuple\n\
+    #define f first\n#define s second\n#define all(x) (x).begin(), (x).end()\n#define\
+    \ len(x) ll(x.size())\n\nint popcount(int x) { return __builtin_popcount(x); }\n\
+    int popcount(ll x) { return __builtin_popcountll(x); }\nint topbit(int x) { return\
+    \ (x == 0 ? -1 : 31 - __builtin_clz(x)); }\nint topbit(ll x) { return (x == 0\
+    \ ? -1 : 63 - __builtin_clzll(x)); }\nint lobit(int x) { return (x == 0 ? -1 :\
+    \ __builtin_ctz(x)); }\nint lobit(ll x) { return (x == 0 ? -1 : __builtin_ctzll(x));\
+    \ }\n\n#define lb(x, v) lower_bound(all(x), v)\n#define ub(x, v) upper_bound(all(x),\
+    \ v)\n#define lwb(x, v) distance(x.begin(), lb(x, v))\n#define upb(x, v) distance(x.begin(),\
+    \ ub(x, v))\n#define rem_dup(x) sort(all(x)), x.erase(unique(all(x)), x.end())\n\
+    \ntemplate <class T, class U>\nbool ckmax(T &a, U b) { return (a < b ? a = b,\
+    \ true : false); }\ntemplate <class T, class U>\nbool ckmin(T &a, U b) { return\
+    \ (a > b ? a = b, true : false); }\n\ntemplate <typename F>\nll first_true(F check,\
+    \ ll lo, ll hi) {\n  ++hi;\n  while (lo < hi) {\n    ll mi = lo + (hi - lo) /\
+    \ 2;\n    check(mi) ? hi = mi : lo = mi + 1;\n  }\n  return lo;\n}\ntemplate <typename\
+    \ F>\nll last_true(F check, ll lo, ll hi) {\n  --lo;\n  while (lo < hi) {\n  \
+    \  ll mi = lo + (hi - lo + 1) / 2;\n    check(mi) ? lo = mi : hi = mi - 1;\n \
+    \ }\n  return lo;\n}\ntemplate <typename F>\ndb binary_search_real(F check, db\
+    \ lo, db hi, int iter = 100) {\n  rep(iter) {\n    db mi = (lo + hi) / 2;\n  \
+    \  (check(mi) ? lo : hi) = mi;\n  }\n  return (lo + hi) / 2;\n}\ntemplate <typename\
+    \ T, typename U>\nvt<T> cumsum(vt<U> &A, int offset = 1) {\n  int N = len(A);\n\
+    \  vt<T> B(N + 1);\n  rep(i, N) B[i + 1] = B[i] + A[i];\n  if (offset == 0) B.erase(B.begin());\n\
+    \  return B;\n}\ntemplate <typename T>\nvi argsort(vt<T> &A) {\n  vi ids(len(A));\n\
+    \  iota(all(ids), 0);\n  sort(all(ids), [&](int i, int j) { return A[i] == A[j]\
+    \ ? i < j : A[i] < A[j]; });\n  return ids;\n}\nvi s_to_vi(const str &S, char\
+    \ first_char) {\n  vi res(len(S));\n  rep(i, len(S)) res[i] = (S[i] != '?' ? S[i]\
+    \ - first_char : -1); \n  return res;\n}\nvoid SETIO() {\n  cin.tie(nullptr)->sync_with_stdio(false);\n\
     \  cout << fixed << setprecision(20);\n}\n\n// https://codeforces.com/submissions/benq\n\
     inline namespace IO {\n#define SFINAE(x, ...)                                \
     \                         \\\n  template <class, class = void> struct x : std::false_type\
@@ -122,8 +119,7 @@ data:
     \ \\\n  vector<type> name(size);    \\\n  read(name)\n#define read_vv(type, name,\
     \ h, w)                     \\\n  vector<vector<type>> name(h, vector<type>(w));\
     \ \\\n  read(name)\n// ------------------------------------- TEMPLATE ABOVE ------------------------------//\n\
-    \nvoid solve() {\n\n}\n\nint main() {\n  SETIO();\n//ints(n); rep(n)\n  solve();\n\
-    }\n"
+    \n"
   code: "#include <bits/stdc++.h>\n\nusing namespace std;\n\nusing db = double;\n\
     using ll = long long;\nusing u32 = unsigned int;\nusing u64 = unsigned long long;\n\
     using i128 = __int128;\nusing str = string;\n\nusing pi = pair<ll, ll>;\nusing\
@@ -232,20 +228,18 @@ data:
     \ \\\n  vector<type> name(size);    \\\n  read(name)\n#define read_vv(type, name,\
     \ h, w)                     \\\n  vector<vector<type>> name(h, vector<type>(w));\
     \ \\\n  read(name)\n// ------------------------------------- TEMPLATE ABOVE ------------------------------//\n\
-    \nvoid solve() {\n\n}\n\nint main() {\n  SETIO();\n//ints(n); rep(n)\n  solve();\n\
-    }\n"
+    \n"
   dependsOn: []
   isVerificationFile: false
-  path: misc/my_template.hpp
+  path: misc/my_template_test.hpp
   requiredBy: []
   timestamp: '2024-05-08 17:48:11+08:00'
-  verificationStatus: LIBRARY_ALL_WA
-  verifiedWith:
-  - test/library_checker/datastructure/union_find.test.cpp
-documentation_of: misc/my_template.hpp
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
+documentation_of: misc/my_template_test.hpp
 layout: document
 redirect_from:
-- /library/misc/my_template.hpp
-- /library/misc/my_template.hpp.html
-title: misc/my_template.hpp
+- /library/misc/my_template_test.hpp
+- /library/misc/my_template_test.hpp.html
+title: misc/my_template_test.hpp
 ---
