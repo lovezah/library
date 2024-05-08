@@ -1,6 +1,11 @@
 ---
 data:
   libraryCategories:
+  - name: ds
+    pages:
+    - icon: ':warning:'
+      path: ds/union_find.cpp
+      title: ds/union_find.cpp
   - name: misc
     pages:
     - icon: ':warning:'
