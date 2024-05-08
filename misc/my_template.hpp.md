@@ -119,7 +119,7 @@ data:
     \ \\\n  vector<type> name(size);    \\\n  read(name)\n#define read_vv(type, name,\
     \ h, w)                     \\\n  vector<vector<type>> name(h, vector<type>(w));\
     \ \\\n  read(name)\n// ------------------------------------- TEMPLATE ABOVE ------------------------------//\n\
-    \nvoid solve() {\n\n}\n\nint main() {\n  SETIO();\n//ints(n); rep(n)\n  solve();\n\
+    \nvoid solve() {\n\n}\n\nint main() {\n  SETIO();\n  // ints(n); rep(n)\n  solve();\n\
     }\n"
   code: "#include <bits/stdc++.h>\n\nusing namespace std;\n\nusing db = double;\n\
     using ll = long long;\nusing u32 = unsigned int;\nusing u64 = unsigned long long;\n\
@@ -229,13 +229,13 @@ data:
     \ \\\n  vector<type> name(size);    \\\n  read(name)\n#define read_vv(type, name,\
     \ h, w)                     \\\n  vector<vector<type>> name(h, vector<type>(w));\
     \ \\\n  read(name)\n// ------------------------------------- TEMPLATE ABOVE ------------------------------//\n\
-    \nvoid solve() {\n\n}\n\nint main() {\n  SETIO();\n//ints(n); rep(n)\n  solve();\n\
+    \nvoid solve() {\n\n}\n\nint main() {\n  SETIO();\n  // ints(n); rep(n)\n  solve();\n\
     }\n"
   dependsOn: []
   isVerificationFile: false
   path: misc/my_template.hpp
   requiredBy: []
-  timestamp: '2024-05-08 17:48:11+08:00'
+  timestamp: '2024-05-08 17:53:55+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: misc/my_template.hpp
