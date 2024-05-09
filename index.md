@@ -6,6 +6,14 @@ data:
     - icon: ':heavy_check_mark:'
       path: ds/union_find.hpp
       title: ds/union_find.hpp
+  - name: graph
+    pages:
+    - icon: ':warning:'
+      path: graph/base.hpp
+      title: graph/base.hpp
+    - icon: ':warning:'
+      path: graph/floyd.hpp
+      title: graph/floyd.hpp
   - name: misc
     pages:
     - icon: ':warning:'
