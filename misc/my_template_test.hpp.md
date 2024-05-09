@@ -9,6 +9,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/datastructure/union_find.test.cpp
     title: test/library_checker/datastructure/union_find.test.cpp
+  - icon: ':x:'
+    path: test_atcoder/abc073d.test.cpp
+    title: test_atcoder/abc073d.test.cpp
   _isVerificationFailed: true
   _pathExtension: hpp
   _verificationStatusIcon: ':question:'
@@ -244,6 +247,7 @@ data:
   verifiedWith:
   - test/atcoder/abc073d.test.cpp
   - test/library_checker/datastructure/union_find.test.cpp
+  - test_atcoder/abc073d.test.cpp
 documentation_of: misc/my_template_test.hpp
 layout: document
 redirect_from:

@@ -9,6 +9,9 @@ data:
   - icon: ':x:'
     path: test/atcoder/abc073d.test.cpp
     title: test/atcoder/abc073d.test.cpp
+  - icon: ':x:'
+    path: test_atcoder/abc073d.test.cpp
+    title: test_atcoder/abc073d.test.cpp
   _isVerificationFailed: true
   _pathExtension: hpp
   _verificationStatusIcon: ':x:'
@@ -77,6 +80,7 @@ data:
   verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - test/atcoder/abc073d.test.cpp
+  - test_atcoder/abc073d.test.cpp
 documentation_of: graph/base.hpp
 layout: document
 redirect_from:

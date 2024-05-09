@@ -41,5 +41,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/datastructure/union_find.test.cpp
       title: test/library_checker/datastructure/union_find.test.cpp
+  - name: test_atcoder
+    pages:
+    - icon: ':x:'
+      path: test_atcoder/abc073d.test.cpp
+      title: test_atcoder/abc073d.test.cpp
 layout: toppage
 ---
