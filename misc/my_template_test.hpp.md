@@ -3,12 +3,15 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
+  - icon: ':x:'
+    path: test/atcoder/abc073d.test.cpp
+    title: test/atcoder/abc073d.test.cpp
   - icon: ':heavy_check_mark:'
     path: test/library_checker/datastructure/union_find.test.cpp
     title: test/library_checker/datastructure/union_find.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links:
     - https://codeforces.com/submissions/benq
@@ -237,8 +240,9 @@ data:
   path: misc/my_template_test.hpp
   requiredBy: []
   timestamp: '2024-05-08 17:48:11+08:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
+  - test/atcoder/abc073d.test.cpp
   - test/library_checker/datastructure/union_find.test.cpp
 documentation_of: misc/my_template_test.hpp
 layout: document

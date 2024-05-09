@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: ds/union_find.hpp
     title: ds/union_find.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: misc/my_template_test.hpp
     title: misc/my_template_test.hpp
   _extendedRequiredBy: []
