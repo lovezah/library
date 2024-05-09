@@ -1,20 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/base.hpp
     title: graph/base.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
-    path: test/atcoder/abc073d.test.cpp
-    title: test/atcoder/abc073d.test.cpp
-  - icon: ':x:'
-    path: test_atcoder/abc073d.test.cpp
-    title: test_atcoder/abc073d.test.cpp
-  _isVerificationFailed: true
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/GRL_1_C.test.cpp
+    title: test/aoj/GRL_1_C.test.cpp
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"graph/base.hpp\"\n\ntemplate <typename T> \nstruct Edge\
@@ -61,10 +58,9 @@ data:
   path: graph/floyd.hpp
   requiredBy: []
   timestamp: '2024-05-10 00:32:11+08:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/atcoder/abc073d.test.cpp
-  - test_atcoder/abc073d.test.cpp
+  - test/aoj/GRL_1_C.test.cpp
 documentation_of: graph/floyd.hpp
 layout: document
 redirect_from:

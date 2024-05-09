@@ -3,18 +3,15 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
-    path: test/atcoder/abc073d.test.cpp
-    title: test/atcoder/abc073d.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/GRL_1_C.test.cpp
+    title: test/aoj/GRL_1_C.test.cpp
   - icon: ':heavy_check_mark:'
     path: test/library_checker/datastructure/union_find.test.cpp
     title: test/library_checker/datastructure/union_find.test.cpp
-  - icon: ':x:'
-    path: test_atcoder/abc073d.test.cpp
-    title: test_atcoder/abc073d.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links:
     - https://codeforces.com/submissions/benq
@@ -243,11 +240,10 @@ data:
   path: misc/my_template_test.hpp
   requiredBy: []
   timestamp: '2024-05-08 17:48:11+08:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/atcoder/abc073d.test.cpp
+  - test/aoj/GRL_1_C.test.cpp
   - test/library_checker/datastructure/union_find.test.cpp
-  - test_atcoder/abc073d.test.cpp
 documentation_of: misc/my_template_test.hpp
 layout: document
 redirect_from:

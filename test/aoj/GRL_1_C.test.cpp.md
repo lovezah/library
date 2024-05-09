@@ -1,26 +1,26 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/base.hpp
     title: graph/base.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/floyd.hpp
     title: graph/floyd.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: misc/my_template_test.hpp
     title: misc/my_template_test.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://atcoder.jp/contests/abc073/tasks/abc073_d
+    PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_C
     links:
-    - https://atcoder.jp/contests/abc073/tasks/abc073_d
-  bundledCode: "#line 1 \"test_atcoder/abc073d.test.cpp\"\n#define PROBLEM \"https://atcoder.jp/contests/abc073/tasks/abc073_d\"\
+    - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_C
+  bundledCode: "#line 1 \"test/aoj/GRL_1_C.test.cpp\"\n#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_C\"\
     \n#line 1 \"misc/my_template_test.hpp\"\n#include <bits/stdc++.h>\n\nusing namespace\
     \ std;\n\nusing db = double;\nusing ll = long long;\nusing u32 = unsigned int;\n\
     using u64 = unsigned long long;\nusing i128 = __int128;\nusing str = string;\n\
@@ -161,35 +161,35 @@ data:
     \ n) {\n    dist[i][i] = 0;\n    for (auto e : G[i]) ckmin(dist[i][e.to], e.cost);\n\
     \  }\n  rep(k, n) rep(i, n) {\n    if (dist[i][k] == infty<T>) continue;\n   \
     \ rep(j, n) {\n      if (dist[k][j] == infty<T>) continue;\n      ckmin(dist[i][j],\
-    \ dist[i][k] + dist[k][j]);\n    }\n  }\n  return dist;\n}\n#line 5 \"test_atcoder/abc073d.test.cpp\"\
-    \n\nvoid solve() {\n  lls(n, m, r);\n  read_vec(ll, wr, r);\n  rep(i, r) wr[i]--;\n\
-    \  Graph<ll, 0> G(n);\n  G.read_graph(m, 1);\n  auto g = floyd<ll> (G);\n  rep(k,\
-    \ n) rep(i, n) rep(j, n) ckmin(g[i][j], g[i][k] + g[k][j]);\n  sort(all(wr));\n\
-    \  ll ans = infty<ll>;\n  do {\n    ll cur = 0;\n    rep(i, 1, r) {\n      cur\
-    \ += g[wr[i - 1]][wr[i]];\n    } \n    ckmin(ans, cur);\n  } while (next_permutation(all(wr)));\n\
-    \  print(ans);\n}\nint main() {\n  SETIO();\n  solve();\n}\n"
-  code: "#define PROBLEM \"https://atcoder.jp/contests/abc073/tasks/abc073_d\"\n#include\
-    \ \"misc/my_template_test.hpp\"\n#include \"graph/base.hpp\"\n#include \"graph/floyd.hpp\"\
-    \n\nvoid solve() {\n  lls(n, m, r);\n  read_vec(ll, wr, r);\n  rep(i, r) wr[i]--;\n\
-    \  Graph<ll, 0> G(n);\n  G.read_graph(m, 1);\n  auto g = floyd<ll> (G);\n  rep(k,\
-    \ n) rep(i, n) rep(j, n) ckmin(g[i][j], g[i][k] + g[k][j]);\n  sort(all(wr));\n\
-    \  ll ans = infty<ll>;\n  do {\n    ll cur = 0;\n    rep(i, 1, r) {\n      cur\
-    \ += g[wr[i - 1]][wr[i]];\n    } \n    ckmin(ans, cur);\n  } while (next_permutation(all(wr)));\n\
-    \  print(ans);\n}\nint main() {\n  SETIO();\n  solve();\n}"
+    \ dist[i][k] + dist[k][j]);\n    }\n  }\n  return dist;\n}\n#line 5 \"test/aoj/GRL_1_C.test.cpp\"\
+    \n\nvoid solve() {\n  lls(n, m);\n  Graph<ll, 1> G(n);\n  G.read_graph(m, 1, 0);\n\
+    \  auto dist = floyd<ll>(G);\n  rep(i, n) if (dist[i][i] < 0) return print(\"\
+    NEGATIVE CYCLE\");\n  rep(a, n) {\n    str s;\n    rep(b, n) {\n      if (b) s\
+    \ += \" \";\n      ll x = dist[a][b];\n      if (x == infty<ll>) s += \"INF\"\
+    ;\n      else s += to_string(x);\n    }\n    print(s);\n  }\n}\nint main() {\n\
+    \  SETIO();\n  solve();\n}\n"
+  code: "#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_C\"\
+    \n#include \"misc/my_template_test.hpp\"\n#include \"graph/base.hpp\"\n#include\
+    \ \"graph/floyd.hpp\"\n\nvoid solve() {\n  lls(n, m);\n  Graph<ll, 1> G(n);\n\
+    \  G.read_graph(m, 1, 0);\n  auto dist = floyd<ll>(G);\n  rep(i, n) if (dist[i][i]\
+    \ < 0) return print(\"NEGATIVE CYCLE\");\n  rep(a, n) {\n    str s;\n    rep(b,\
+    \ n) {\n      if (b) s += \" \";\n      ll x = dist[a][b];\n      if (x == infty<ll>)\
+    \ s += \"INF\";\n      else s += to_string(x);\n    }\n    print(s);\n  }\n}\n\
+    int main() {\n  SETIO();\n  solve();\n}"
   dependsOn:
   - misc/my_template_test.hpp
   - graph/base.hpp
   - graph/floyd.hpp
   isVerificationFile: true
-  path: test_atcoder/abc073d.test.cpp
+  path: test/aoj/GRL_1_C.test.cpp
   requiredBy: []
-  timestamp: '2024-05-10 00:37:08+08:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-05-10 00:59:30+08:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test_atcoder/abc073d.test.cpp
+documentation_of: test/aoj/GRL_1_C.test.cpp
 layout: document
 redirect_from:
-- /verify/test_atcoder/abc073d.test.cpp
-- /verify/test_atcoder/abc073d.test.cpp.html
-title: test_atcoder/abc073d.test.cpp
+- /verify/test/aoj/GRL_1_C.test.cpp
+- /verify/test/aoj/GRL_1_C.test.cpp.html
+title: test/aoj/GRL_1_C.test.cpp
 ---

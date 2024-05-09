@@ -8,10 +8,10 @@ data:
       title: ds/union_find.hpp
   - name: graph
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: graph/base.hpp
       title: graph/base.hpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: graph/floyd.hpp
       title: graph/floyd.hpp
   - name: misc
@@ -19,7 +19,7 @@ data:
     - icon: ':warning:'
       path: misc/my_template.hpp
       title: misc/my_template.hpp
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: misc/my_template_test.hpp
       title: misc/my_template_test.hpp
   - name: mod
@@ -31,20 +31,15 @@ data:
       path: mod/modint.hpp
       title: mod/modint.hpp
   verificationCategories:
-  - name: test/atcoder
+  - name: test/aoj
     pages:
-    - icon: ':x:'
-      path: test/atcoder/abc073d.test.cpp
-      title: test/atcoder/abc073d.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/GRL_1_C.test.cpp
+      title: test/aoj/GRL_1_C.test.cpp
   - name: test/library_checker/datastructure
     pages:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/datastructure/union_find.test.cpp
       title: test/library_checker/datastructure/union_find.test.cpp
-  - name: test_atcoder
-    pages:
-    - icon: ':x:'
-      path: test_atcoder/abc073d.test.cpp
-      title: test_atcoder/abc073d.test.cpp
 layout: toppage
 ---
