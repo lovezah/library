@@ -3,6 +3,9 @@ data:
   libraryCategories:
   - name: ds
     pages:
+    - icon: ':warning:'
+      path: ds/segtree.hpp
+      title: ds/segtree.hpp
     - icon: ':heavy_check_mark:'
       path: ds/union_find.hpp
       title: ds/union_find.hpp
