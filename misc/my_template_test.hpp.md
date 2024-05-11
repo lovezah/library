@@ -7,6 +7,9 @@ data:
     path: test/aoj/GRL_1_C.test.cpp
     title: test/aoj/GRL_1_C.test.cpp
   - icon: ':heavy_check_mark:'
+    path: test/library_checker/datastructure/point_add_range_sum.test.cpp
+    title: test/library_checker/datastructure/point_add_range_sum.test.cpp
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/datastructure/union_find.test.cpp
     title: test/library_checker/datastructure/union_find.test.cpp
   _isVerificationFailed: false
@@ -243,6 +246,7 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/GRL_1_C.test.cpp
+  - test/library_checker/datastructure/point_add_range_sum.test.cpp
   - test/library_checker/datastructure/union_find.test.cpp
 documentation_of: misc/my_template_test.hpp
 layout: document

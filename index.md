@@ -3,7 +3,7 @@ data:
   libraryCategories:
   - name: ds
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: ds/segtree.hpp
       title: ds/segtree.hpp
     - icon: ':heavy_check_mark:'
@@ -41,6 +41,9 @@ data:
       title: test/aoj/GRL_1_C.test.cpp
   - name: test/library_checker/datastructure
     pages:
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/datastructure/point_add_range_sum.test.cpp
+      title: test/library_checker/datastructure/point_add_range_sum.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/library_checker/datastructure/union_find.test.cpp
       title: test/library_checker/datastructure/union_find.test.cpp
