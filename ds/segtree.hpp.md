@@ -42,8 +42,7 @@ data:
     \  template <class F>\n  int find_first(int l, int r, F &f) {\n    assert(0 <=\
     \ l && l < r && r <= n);\n    return find_first(1, 0, n, l, r, f);\n  }\n  template\
     \ <class F>\n  int find_last(int l, int r, F &f) {\n    assert(0 <= l && l < r\
-    \ && r <= n);\n    return find_last(1, 0, n, l, r, f);\n  }\n};\n\nll op(ll x,\
-    \ ll y) {\n  return max(x, y);\n}\nll e() {\n  return -infty<ll>;\n}\n"
+    \ && r <= n);\n    return find_last(1, 0, n, l, r, f);\n  }\n};\n"
   code: "#pragma once\n\ntemplate <class X, X(* op)(X, X), X (*e)()>\nstruct segtree\
     \ {\n  int n;\n  vt<X> v;\n  segtree(int m = 0) {\n    init(vt<X>(m, e()));\n\
     \  }\n  segtree(const vt<X> &vv) {\n    init(vv);\n  }\n  void init(vt<X> vv)\
@@ -78,13 +77,12 @@ data:
     \ l, int r, F &f) {\n    assert(0 <= l && l < r && r <= n);\n    return find_first(1,\
     \ 0, n, l, r, f);\n  }\n  template <class F>\n  int find_last(int l, int r, F\
     \ &f) {\n    assert(0 <= l && l < r && r <= n);\n    return find_last(1, 0, n,\
-    \ l, r, f);\n  }\n};\n\nll op(ll x, ll y) {\n  return max(x, y);\n}\nll e() {\n\
-    \  return -infty<ll>;\n}\n"
+    \ l, r, f);\n  }\n};\n"
   dependsOn: []
   isVerificationFile: false
   path: ds/segtree.hpp
   requiredBy: []
-  timestamp: '2024-05-12 01:04:13+08:00'
+  timestamp: '2024-05-12 01:07:33+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: ds/segtree.hpp
