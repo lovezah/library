@@ -100,10 +100,3 @@ struct segtree {
     return find_last(1, 0, n, l, r, f);
   }
 };
-
-ll op(ll x, ll y) {
-  return max(x, y);
-}
-ll e() {
-  return -infty<ll>;
-}
