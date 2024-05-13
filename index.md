@@ -33,6 +33,11 @@ data:
     - icon: ':warning:'
       path: mod/modint.hpp
       title: mod/modint.hpp
+  - name: nt
+    pages:
+    - icon: ':warning:'
+      path: nt/sieve.hpp
+      title: nt/sieve.hpp
   verificationCategories:
   - name: test/aoj
     pages:
