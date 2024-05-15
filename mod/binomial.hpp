@@ -4,7 +4,7 @@
 
 struct {
   int n = 0;
-  vt<mint> _fac, _ifac, _inv;
+  vector<mint> _fac, _ifac, _inv;
 
   void init(int m) {
     if (m <= n) return;
@@ -12,11 +12,11 @@ struct {
     _ifac.resize(m + 1);
     _inv.resize(m + 1);
     _fac[0] = 1;
-    rep(i, n + 1, m + 1) {
+    for (int i = n + 1; i <= m; i++) {
       _fac[i] = _fac[i - 1] * i;
     }
     _ifac[m] = _fac[m].inv();
-    per(i, n + 1, m + 1) {
+    for (int i = m; i > n; i--) {
       _ifac[i - 1] = _ifac[i] * i;
       _inv[i] = _ifac[i] * _fac[i - 1];
     }

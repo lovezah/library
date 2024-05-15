@@ -3,19 +3,19 @@
 template <class X, X(* op)(X, X), X (*e)()>
 struct segtree {
   int n;
-  vt<X> v;
+  vector<X> v;
   segtree(int m = 0) {
     init(vt<X>(m, e()));
   }
-  segtree(const vt<X> &vv) {
-    init(vv);
+  segtree(const vt<X> &dat) {
+    init(dat);
   }
-  void init(vt<X> vv) {
-    n = len(vv);
+  void init(vt<X> dat) {
+    n = len(dat);
     v.assign(4 << (int)(log2(n)), e());
     function<void(int, int, int)> build = [&](int p, int l, int r) {
       if (r - l == 1) {
-        v[p] = vv[l];
+        v[p] = dat[l];
         return;
       }
       int m = (l + r) / 2;

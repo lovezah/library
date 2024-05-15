@@ -1,15 +1,15 @@
 #pragma once
 
-vt<int> min_factor;
-vt<int> primes;
-vt<bool> prime;
+vector<int> min_factor;
+vector<int> primes;
+vector<bool> prime;
 void sieve(int lim) {
-  ckmax(lim, 1);
+  if (lim < 1) lim = 1;
   min_factor.assign(lim + 1, 0);
   prime.assign(lim + 1, true);
   prime[0] = prime[1] = false;
   primes.reserve(int(lim / log(lim) * 1.1));
-  rep(i, 2, lim + 1) {
+  for (int i = 2; i <= lim; i++) {
     if (prime[i]) {
       min_factor[i] = i;
       primes.eb(i);
