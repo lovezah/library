@@ -12,11 +12,11 @@ data:
   - name: graph
     pages:
     - icon: ':warning:'
-      path: graph/base.hpp
-      title: graph/base.hpp
+      path: graph/floyd_warshall.hpp
+      title: graph/floyd_warshall.hpp
     - icon: ':warning:'
-      path: graph/floyd.hpp
-      title: graph/floyd.hpp
+      path: graph/graph.hpp
+      title: graph/graph.hpp
   - name: misc
     pages:
     - icon: ':warning:'
