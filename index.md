@@ -7,6 +7,9 @@ data:
       path: ds/segtree.hpp
       title: ds/segtree.hpp
     - icon: ':warning:'
+      path: ds/sparse_table.hpp
+      title: ds/sparse_table.hpp
+    - icon: ':warning:'
       path: ds/union_find.hpp
       title: ds/union_find.hpp
   - name: graph
