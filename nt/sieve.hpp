@@ -12,7 +12,7 @@ void sieve(int lim) {
   for (int i = 2; i <= lim; i++) {
     if (prime[i]) {
       min_factor[i] = i;
-      primes.eb(i);
+      primes.push_back(i);
     }
     for (const auto &p : primes) {
       if (p > min_factor[i] || i * p > lim) break;
