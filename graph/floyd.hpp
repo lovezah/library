@@ -2,7 +2,7 @@
 #include "graph/base.hpp"
 
 template <typename T, typename GT>
-vt<vt<T>> floyd(GT &G) {
+vector<vector<T>> floyd(GT &G) {
   int n = G.n;
   vv(T, dist, n, n, infty<T>);
   rep(i, n) {
