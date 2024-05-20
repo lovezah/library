@@ -4,7 +4,7 @@ template <int P>
 struct modint {
   int v;
   constexpr modint() : v {0} {}
-  constexpr modint(int64_t v) : v {int(v % mod())} { if (v < 0) v += mod(); }
+  constexpr modint(int64_t _v) : v {int(_v % mod())} { if (v < 0) v += mod(); }
 
   static int MOD;
   constexpr static int mod() {
@@ -36,12 +36,12 @@ struct modint {
   }
 
   constexpr modint inv() const {
-    int a = val, b = mod(), u = 1, v = 0, t;
+    int a = v, b = mod(), x = 1, y = 0, t;
     while (b > 0) {
       t = a / b;
-      swap(a -= t * b, b), swap(u -= t * v, v);
+      swap(a -= t * b, b), swap(x -= t * y, y);
     }
-    return modint(u);
+    return modint(x);
   }
   friend modint inv(const modint &m) {
     return m.inv();
@@ -120,4 +120,4 @@ template <typename T> T pow(T a, int64_t b) {
 template<>
 int modint<0>::MOD = 998244353;
 
-using mint = modint<998244353>; // 1000000007
+using mint = modint<1000000007>; // 998244353
