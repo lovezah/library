@@ -13,7 +13,7 @@ data:
     links: []
   bundledCode: "#line 2 \"mod/binomial.hpp\"\n\n#line 2 \"mod/modint.hpp\"\n\ntemplate\
     \ <int P>\nstruct modint {\n  int v;\n  constexpr modint() : v {0} {}\n  constexpr\
-    \ modint(int64_t v) : v {int(v % mod())} { if (v < 0) v += mod(); }\n\n  static\
+    \ modint(int64_t _v) : v {int(_v % mod())} { if (v < 0) v += mod(); }\n\n  static\
     \ int MOD;\n  constexpr static int mod() {\n    if (P > 0) {\n      return P;\n\
     \    } else {\n      return MOD;\n    }\n  }\n  constexpr static void set_mod(int\
     \ MOD_) {\n    MOD = MOD_;\n  }\n\n  explicit operator int() const { return v;\
@@ -23,9 +23,9 @@ data:
     \ in;\n  }\n  friend bool operator == (const modint &a, const modint &b) {\n \
     \   return a.v == b.v;\n  }\n  friend bool operator != (const modint &a, const\
     \ modint &b) {\n    return a.v != b.v;\n  }\n\n  constexpr modint inv() const\
-    \ {\n    int a = val, b = mod(), u = 1, v = 0, t;\n    while (b > 0) {\n     \
-    \ t = a / b;\n      swap(a -= t * b, b), swap(u -= t * v, v);\n    }\n    return\
-    \ modint(u);\n  }\n  friend modint inv(const modint &m) {\n    return m.inv();\n\
+    \ {\n    int a = v, b = mod(), x = 1, y = 0, t;\n    while (b > 0) {\n      t\
+    \ = a / b;\n      swap(a -= t * b, b), swap(x -= t * y, y);\n    }\n    return\
+    \ modint(x);\n  }\n  friend modint inv(const modint &m) {\n    return m.inv();\n\
     \  }\n  modint operator-() const {\n    modint res;\n    res.v = v ? mod() - v\
     \ : 0;\n    return res;\n  }\n  modint operator+() const {\n    return modint(*this);\n\
     \  }\n  modint& operator ++ () {\n    v++;\n    if (v == mod()) v = 0;\n    return\
@@ -46,7 +46,7 @@ data:
     \ /= b;\n  }\n};\n\ntemplate <typename T> T pow(T a, int64_t b) {\n\tassert(b\
     \ >= 0);\n  T r = 1;\n  while (b) {\n    if (b & 1) r *= a;\n    b >>= 1;\n  \
     \  a *= a;\n  }\n  return r;\n}\n\ntemplate<>\nint modint<0>::MOD = 998244353;\n\
-    \nusing mint = modint<998244353>; // 1000000007\n#line 4 \"mod/binomial.hpp\"\n\
+    \nusing mint = modint<1000000007>; // 998244353\n#line 4 \"mod/binomial.hpp\"\n\
     \nstruct {\n  int n = 0;\n  vector<mint> _fac, _ifac, _inv;\n\n  void init(int\
     \ m) {\n    if (m <= n) return;\n    _fac.resize(m + 1);\n    _ifac.resize(m +\
     \ 1);\n    _inv.resize(m + 1);\n    _fac[0] = 1;\n    for (int i = n + 1; i <=\
@@ -77,7 +77,7 @@ data:
   isVerificationFile: false
   path: mod/binomial.hpp
   requiredBy: []
-  timestamp: '2024-05-15 16:33:34+08:00'
+  timestamp: '2024-05-20 18:30:54+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: mod/binomial.hpp
