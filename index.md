@@ -4,6 +4,9 @@ data:
   - name: ds
     pages:
     - icon: ':warning:'
+      path: ds/fenwick.hpp
+      title: ds/fenwick.hpp
+    - icon: ':warning:'
       path: ds/segtree.hpp
       title: ds/segtree.hpp
     - icon: ':warning:'
