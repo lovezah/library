@@ -15,6 +15,11 @@ data:
     - icon: ':warning:'
       path: ds/union_find.hpp
       title: ds/union_find.hpp
+  - name: flows
+    pages:
+    - icon: ':warning:'
+      path: flows/flow.hpp
+      title: flows/flow.hpp
   - name: graph
     pages:
     - icon: ':warning:'
