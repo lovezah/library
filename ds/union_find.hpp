@@ -4,6 +4,7 @@ struct union_find {
   int n, comp;
   vector<int> p;
   union_find(int m = 0) : n(m) {
+    comp = n;
     p.assign(n, -1);
   }
   int get(int x) {
@@ -19,7 +20,7 @@ struct union_find {
     if (-p[x] < -p[y]) swap(x, y);
     p[x] += p[y];
     p[y] = x;
-    comp--;
+    --comp;
     return true;
   }
   int size(int x) {
