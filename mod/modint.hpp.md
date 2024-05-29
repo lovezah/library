@@ -43,10 +43,10 @@ data:
     \ &b) {\n    return modint(a) -= b;\n  }\n  friend modint operator * (const modint\
     \ &a, const modint &b) {\n    return modint(a) *= b;\n  }\n  friend modint operator\
     \ / (const modint &a, const modint &b) {\n    return modint(a) /= b;\n  }\n};\n\
-    \ntemplate <typename T> T pow(T a, int64_t b) {\n\tassert(b >= 0);\n  T r = 1;\n\
+    \ntemplate <typename T> T pow(T a, int64_t b) {\n  assert(b >= 0);\n  T r = 1;\n\
     \  while (b) {\n    if (b & 1) r *= a;\n    b >>= 1;\n    a *= a;\n  }\n  return\
-    \ r;\n}\n\ntemplate<>\nint modint<0>::MOD = 998244353;\n\nusing mint = modint<1000000007>;\
-    \ // 998244353\n"
+    \ r;\n}\n\ntemplate<>\nint modint<0>::MOD = 998244353;\n\nusing modint107 = modint<1000000007>;\n\
+    using modint998 = modint<998244353>;\nusing modint000 = modint<0>;\n"
   code: "#pragma once\n\ntemplate <int P>\nstruct modint {\n  int v;\n  constexpr\
     \ modint() : v {0} {}\n  constexpr modint(int64_t _v) : v {int(_v % mod())} {\
     \ if (v < 0) v += mod(); }\n\n  static int MOD;\n  constexpr static int mod()\
@@ -79,15 +79,16 @@ data:
     \ modint(a) -= b;\n  }\n  friend modint operator * (const modint &a, const modint\
     \ &b) {\n    return modint(a) *= b;\n  }\n  friend modint operator / (const modint\
     \ &a, const modint &b) {\n    return modint(a) /= b;\n  }\n};\n\ntemplate <typename\
-    \ T> T pow(T a, int64_t b) {\n\tassert(b >= 0);\n  T r = 1;\n  while (b) {\n \
+    \ T> T pow(T a, int64_t b) {\n  assert(b >= 0);\n  T r = 1;\n  while (b) {\n \
     \   if (b & 1) r *= a;\n    b >>= 1;\n    a *= a;\n  }\n  return r;\n}\n\ntemplate<>\n\
-    int modint<0>::MOD = 998244353;\n\nusing mint = modint<1000000007>; // 998244353"
+    int modint<0>::MOD = 998244353;\n\nusing modint107 = modint<1000000007>;\nusing\
+    \ modint998 = modint<998244353>;\nusing modint000 = modint<0>;"
   dependsOn: []
   isVerificationFile: false
   path: mod/modint.hpp
   requiredBy:
   - mod/binomial.hpp
-  timestamp: '2024-05-20 18:30:54+08:00'
+  timestamp: '2024-05-29 19:40:50+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: mod/modint.hpp

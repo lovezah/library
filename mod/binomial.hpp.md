@@ -43,22 +43,23 @@ data:
     \ &a, const modint &b) {\n    return modint(a) -= b;\n  }\n  friend modint operator\
     \ * (const modint &a, const modint &b) {\n    return modint(a) *= b;\n  }\n  friend\
     \ modint operator / (const modint &a, const modint &b) {\n    return modint(a)\
-    \ /= b;\n  }\n};\n\ntemplate <typename T> T pow(T a, int64_t b) {\n\tassert(b\
+    \ /= b;\n  }\n};\n\ntemplate <typename T> T pow(T a, int64_t b) {\n  assert(b\
     \ >= 0);\n  T r = 1;\n  while (b) {\n    if (b & 1) r *= a;\n    b >>= 1;\n  \
     \  a *= a;\n  }\n  return r;\n}\n\ntemplate<>\nint modint<0>::MOD = 998244353;\n\
-    \nusing mint = modint<1000000007>; // 998244353\n#line 4 \"mod/binomial.hpp\"\n\
-    \nstruct {\n  int n = 0;\n  vector<mint> _fac, _ifac, _inv;\n\n  void init(int\
-    \ m) {\n    if (m <= n) return;\n    _fac.resize(m + 1);\n    _ifac.resize(m +\
-    \ 1);\n    _inv.resize(m + 1);\n    _fac[0] = 1;\n    for (int i = n + 1; i <=\
-    \ m; i++) {\n      _fac[i] = _fac[i - 1] * i;\n    }\n    _ifac[m] = _fac[m].inv();\n\
-    \    for (int i = m; i > n; i--) {\n      _ifac[i - 1] = _ifac[i] * i;\n     \
-    \ _inv[i] = _ifac[i] * _fac[i - 1];\n    }\n    n = m;\n  }\n  mint fac(int m)\
-    \ {\n    if (m >= n) init(m | 1);\n    return _fac[m];\n  }\n  mint ifac(int m)\
-    \ {\n    if (m >= n) init(m | 1);\n    return _ifac[m];\n  }\n  mint inv(int m)\
-    \ {\n    if (m >= n) init(m | 1);\n    return _inv[m];\n  }\n  mint C(int a, int\
-    \ b) {\n    if (a < b || b < 0) return 0;\n    return fac(a) * ifac(b) * ifac(a\
-    \ - b);\n  }\n  mint P(int a, int b) {\n    if (a < b || b < 0) return 0;\n  \
-    \  return fac(a) * ifac(a - b);\n  }\n} binom;\n"
+    \nusing modint107 = modint<1000000007>;\nusing modint998 = modint<998244353>;\n\
+    using modint000 = modint<0>;\n#line 4 \"mod/binomial.hpp\"\n\nstruct {\n  int\
+    \ n = 0;\n  vector<mint> _fac, _ifac, _inv;\n\n  void init(int m) {\n    if (m\
+    \ <= n) return;\n    _fac.resize(m + 1);\n    _ifac.resize(m + 1);\n    _inv.resize(m\
+    \ + 1);\n    _fac[0] = 1;\n    for (int i = n + 1; i <= m; i++) {\n      _fac[i]\
+    \ = _fac[i - 1] * i;\n    }\n    _ifac[m] = _fac[m].inv();\n    for (int i = m;\
+    \ i > n; i--) {\n      _ifac[i - 1] = _ifac[i] * i;\n      _inv[i] = _ifac[i]\
+    \ * _fac[i - 1];\n    }\n    n = m;\n  }\n  mint fac(int m) {\n    if (m >= n)\
+    \ init(m | 1);\n    return _fac[m];\n  }\n  mint ifac(int m) {\n    if (m >= n)\
+    \ init(m | 1);\n    return _ifac[m];\n  }\n  mint inv(int m) {\n    if (m >= n)\
+    \ init(m | 1);\n    return _inv[m];\n  }\n  mint C(int a, int b) {\n    if (a\
+    \ < b || b < 0) return 0;\n    return fac(a) * ifac(b) * ifac(a - b);\n  }\n \
+    \ mint P(int a, int b) {\n    if (a < b || b < 0) return 0;\n    return fac(a)\
+    \ * ifac(a - b);\n  }\n} binom;\n"
   code: "#pragma once\n\n#include \"mod/modint.hpp\"\n\nstruct {\n  int n = 0;\n \
     \ vector<mint> _fac, _ifac, _inv;\n\n  void init(int m) {\n    if (m <= n) return;\n\
     \    _fac.resize(m + 1);\n    _ifac.resize(m + 1);\n    _inv.resize(m + 1);\n\
@@ -77,7 +78,7 @@ data:
   isVerificationFile: false
   path: mod/binomial.hpp
   requiredBy: []
-  timestamp: '2024-05-20 18:30:54+08:00'
+  timestamp: '2024-05-29 19:40:50+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: mod/binomial.hpp
