@@ -36,6 +36,9 @@ data:
     - icon: ':warning:'
       path: misc/my_template.hpp
       title: misc/my_template.hpp
+    - icon: ':warning:'
+      path: misc/my_template_multicase.hpp
+      title: misc/my_template_multicase.hpp
   - name: mod
     pages:
     - icon: ':warning:'
