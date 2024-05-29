@@ -107,7 +107,7 @@ struct modint {
 };
 
 template <typename T> T pow(T a, int64_t b) {
-	assert(b >= 0);
+  assert(b >= 0);
   T r = 1;
   while (b) {
     if (b & 1) r *= a;
@@ -120,4 +120,6 @@ template <typename T> T pow(T a, int64_t b) {
 template<>
 int modint<0>::MOD = 998244353;
 
-using mint = modint<1000000007>; // 998244353
+using modint107 = modint<1000000007>;
+using modint998 = modint<998244353>;
+using modint000 = modint<0>;
