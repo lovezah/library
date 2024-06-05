@@ -34,6 +34,9 @@ data:
   - name: misc
     pages:
     - icon: ':warning:'
+      path: misc/debug.hpp
+      title: misc/debug.hpp
+    - icon: ':warning:'
       path: misc/my_template.hpp
       title: misc/my_template.hpp
     - icon: ':warning:'
