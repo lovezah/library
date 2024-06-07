@@ -8,7 +8,7 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "#line 2 \"ds/sparse_table.hpp\"\n\ntemplate <typename T, bool maximum\
+  bundledCode: "#line 1 \"ds/sparse_table.hpp\"\ntemplate <typename T, bool maximum\
     \ = false>\nstruct sparse_table {\n  static int highest_bit(int x) {\n    return\
     \ (x == 0 ? -1 : 31 - __builtin_clz(x));\n  }\n  int n;\n  vector<T> vals;\n \
     \ vector<vector<int>> f;\n  \n  sparse_table(const vector<T> &_vals = {}) {\n\
@@ -23,8 +23,8 @@ data:
     \ assert(0 <= x && x < y && y <= n);\n    int level = highest_bit(y - x);\n  \
     \  return better_index(f[level][x], f[level][y - (1 << level)]);\n  }\n  T query_value(int\
     \ x, int y) {\n    return vals[query_index(x, y)];\n  }\n};\n"
-  code: "#pragma once\n\ntemplate <typename T, bool maximum = false>\nstruct sparse_table\
-    \ {\n  static int highest_bit(int x) {\n    return (x == 0 ? -1 : 31 - __builtin_clz(x));\n\
+  code: "template <typename T, bool maximum = false>\nstruct sparse_table {\n  static\
+    \ int highest_bit(int x) {\n    return (x == 0 ? -1 : 31 - __builtin_clz(x));\n\
     \  }\n  int n;\n  vector<T> vals;\n  vector<vector<int>> f;\n  \n  sparse_table(const\
     \ vector<T> &_vals = {}) {\n    init(_vals);\n  }\n  int better_index(int x, int\
     \ y) {\n    if (maximum) return (vals[x] < vals[y] ? y : x);\n    else return\
@@ -42,7 +42,7 @@ data:
   isVerificationFile: false
   path: ds/sparse_table.hpp
   requiredBy: []
-  timestamp: '2024-05-20 19:06:26+08:00'
+  timestamp: '2024-06-07 21:25:28+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: ds/sparse_table.hpp
