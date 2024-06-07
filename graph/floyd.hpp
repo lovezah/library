@@ -1,5 +1,3 @@
-#include "graph/graph.hpp"
-
 template <typename T, typename GT>
 vector<vector<T>> floyd(GT &g) {
   const T inf = numeric_limits<T>::max() / 2;

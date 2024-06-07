@@ -1,5 +1,3 @@
-#include "mod/modint.hpp"
-
 struct {
   int n = 0;
   vector<mint> _fac, _ifac, _inv;
