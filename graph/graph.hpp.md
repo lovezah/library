@@ -3,8 +3,8 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy:
   - icon: ':warning:'
-    path: graph/floyd_warshall.hpp
-    title: graph/floyd_warshall.hpp
+    path: graph/floyd.hpp
+    title: graph/floyd.hpp
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: hpp
@@ -35,7 +35,7 @@ data:
   isVerificationFile: false
   path: graph/graph.hpp
   requiredBy:
-  - graph/floyd_warshall.hpp
+  - graph/floyd.hpp
   timestamp: '2024-05-15 19:00:18+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []

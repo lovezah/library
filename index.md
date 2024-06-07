@@ -23,11 +23,16 @@ data:
     - icon: ':warning:'
       path: flows/flow.hpp
       title: flows/flow.hpp
+  - name: .
+    pages:
+    - icon: ':warning:'
+      path: generate_snippets.py
+      title: generate_snippets.py
   - name: graph
     pages:
     - icon: ':warning:'
-      path: graph/floyd_warshall.hpp
-      title: graph/floyd_warshall.hpp
+      path: graph/floyd.hpp
+      title: graph/floyd.hpp
     - icon: ':warning:'
       path: graph/graph.hpp
       title: graph/graph.hpp
@@ -37,11 +42,11 @@ data:
       path: misc/debug.hpp
       title: misc/debug.hpp
     - icon: ':warning:'
-      path: misc/my_template.hpp
-      title: misc/my_template.hpp
+      path: misc/g1.hpp
+      title: misc/g1.hpp
     - icon: ':warning:'
-      path: misc/my_template_multicase.hpp
-      title: misc/my_template_multicase.hpp
+      path: misc/gt.hpp
+      title: misc/gt.hpp
   - name: mod
     pages:
     - icon: ':warning:'

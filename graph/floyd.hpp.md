@@ -21,7 +21,7 @@ data:
     \ == -1) i = m++;\n    g[from].push_back((int) edges.size());\n    edges.push_back(edge_type({from,\
     \ to, cost, i}));\n    if (!is_directed) {\n      g[to].push_back((int) edges.size());\n\
     \      edges.push_back(edge_type({to, from, cost, i}));\n    }\n  }\n};\n#line\
-    \ 3 \"graph/floyd_warshall.hpp\"\n\ntemplate <typename T, typename GT>\nvector<vector<T>>\
+    \ 3 \"graph/floyd.hpp\"\n\ntemplate <typename T, typename GT>\nvector<vector<T>>\
     \ floyd_warshall(GT &g) {\n  const T inf = numeric_limits<T>::max() / 2;\n  int\
     \ n = g.n;\n  vector<vector<T>> dist(n, vector<T>(n, inf));\n  for (int i = 0;\
     \ i < n; i++) {\n    dist[i][i] = 0;\n    for (int id : g.g[i]) {\n      auto\
@@ -42,15 +42,15 @@ data:
   dependsOn:
   - graph/graph.hpp
   isVerificationFile: false
-  path: graph/floyd_warshall.hpp
+  path: graph/floyd.hpp
   requiredBy: []
-  timestamp: '2024-05-15 19:00:18+08:00'
+  timestamp: '2024-06-07 21:17:44+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: graph/floyd_warshall.hpp
+documentation_of: graph/floyd.hpp
 layout: document
 redirect_from:
-- /library/graph/floyd_warshall.hpp
-- /library/graph/floyd_warshall.hpp.html
-title: graph/floyd_warshall.hpp
+- /library/graph/floyd.hpp
+- /library/graph/floyd.hpp.html
+title: graph/floyd.hpp
 ---
