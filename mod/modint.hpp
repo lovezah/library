@@ -1,5 +1,3 @@
-#pragma once
-
 template <int P>
 struct modint {
   int v;

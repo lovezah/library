@@ -1,8 +1,7 @@
-#pragma once
 #include "graph/graph.hpp"
 
 template <typename T, typename GT>
-vector<vector<T>> floyd_warshall(GT &g) {
+vector<vector<T>> floyd(GT &g) {
   const T inf = numeric_limits<T>::max() / 2;
   int n = g.n;
   vector<vector<T>> dist(n, vector<T>(n, inf));

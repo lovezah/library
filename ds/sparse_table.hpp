@@ -1,5 +1,3 @@
-#pragma once
-
 template <typename T, bool maximum = false>
 struct sparse_table {
   static int highest_bit(int x) {

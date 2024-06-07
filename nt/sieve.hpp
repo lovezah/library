@@ -1,5 +1,3 @@
-#pragma once
-
 vector<int> min_factor;
 vector<int> primes;
 vector<bool> prime;

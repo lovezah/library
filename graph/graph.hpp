@@ -1,5 +1,3 @@
-#pragma once
-
 template <typename T> 
 struct Edge {
   int from, to;

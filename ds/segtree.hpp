@@ -1,5 +1,3 @@
-#pragma once
-
 template <class X, X(* op)(X, X), X (*e)()>
 struct segtree {
   int n;

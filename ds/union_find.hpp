@@ -1,5 +1,3 @@
-#pragma once
-
 struct union_find {
   int n, comp;
   vector<int> p;
