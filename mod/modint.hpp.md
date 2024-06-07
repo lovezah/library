@@ -1,10 +1,7 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy:
-  - icon: ':warning:'
-    path: mod/binomial.hpp
-    title: mod/binomial.hpp
+  _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: hpp
@@ -86,8 +83,7 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: mod/modint.hpp
-  requiredBy:
-  - mod/binomial.hpp
+  requiredBy: []
   timestamp: '2024-06-07 21:25:28+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []

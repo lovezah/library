@@ -1,10 +1,7 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy:
-  - icon: ':warning:'
-    path: graph/floyd.hpp
-    title: graph/floyd.hpp
+  _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: hpp
@@ -34,8 +31,7 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: graph/graph.hpp
-  requiredBy:
-  - graph/floyd.hpp
+  requiredBy: []
   timestamp: '2024-06-07 21:25:28+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
