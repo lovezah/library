@@ -47,6 +47,9 @@ data:
     - icon: ':warning:'
       path: misc/gt.hpp
       title: misc/gt.hpp
+    - icon: ':warning:'
+      path: misc/rng.hpp
+      title: misc/rng.hpp
   - name: mod
     pages:
     - icon: ':warning:'
