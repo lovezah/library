@@ -11,7 +11,7 @@ using namespace std;
 using int64 = int64_t;
 
 #ifdef LOCAL
-#define debug(...) cerr << "[" << #__VA_ARGS__ << "]:", debug_out(__VA_ARGS__)
+#include "debug.hpp"
 #else
 #define debug(...) (void)0
 #endif
