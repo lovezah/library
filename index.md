@@ -63,6 +63,14 @@ data:
     - icon: ':warning:'
       path: nt/sieve.hpp
       title: nt/sieve.hpp
+  - name: strings
+    pages:
+    - icon: ':warning:'
+      path: strings/rolling_hash.hpp
+      title: strings/rolling_hash.hpp
+    - icon: ':warning:'
+      path: strings/z_function.hpp
+      title: strings/z_function.hpp
   verificationCategories: []
 layout: toppage
 ---
