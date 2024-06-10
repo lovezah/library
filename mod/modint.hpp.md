@@ -43,7 +43,8 @@ data:
     \ntemplate <typename T> T pow(T a, int64_t b) {\n  assert(b >= 0);\n  T r = 1;\n\
     \  while (b) {\n    if (b & 1) r *= a;\n    b >>= 1;\n    a *= a;\n  }\n  return\
     \ r;\n}\n\ntemplate<>\nint modint<0>::MOD = 998244353;\n\nusing modint107 = modint<1000000007>;\n\
-    using modint998 = modint<998244353>;\nusing modint000 = modint<0>;\n"
+    using modint998 = modint<998244353>;\nusing modint000 = modint<0>;\n\nstring to_string(mint\
+    \ x) {\n  return to_string(x.v);\n}\n"
   code: "template <int P>\nstruct modint {\n  int v;\n  constexpr modint() : v {0}\
     \ {}\n  constexpr modint(int64_t _v) : v {int(_v % mod())} { if (v < 0) v += mod();\
     \ }\n\n  static int MOD;\n  constexpr static int mod() {\n    if (P > 0) {\n \
@@ -79,12 +80,13 @@ data:
     \ T> T pow(T a, int64_t b) {\n  assert(b >= 0);\n  T r = 1;\n  while (b) {\n \
     \   if (b & 1) r *= a;\n    b >>= 1;\n    a *= a;\n  }\n  return r;\n}\n\ntemplate<>\n\
     int modint<0>::MOD = 998244353;\n\nusing modint107 = modint<1000000007>;\nusing\
-    \ modint998 = modint<998244353>;\nusing modint000 = modint<0>;"
+    \ modint998 = modint<998244353>;\nusing modint000 = modint<0>;\n\nstring to_string(mint\
+    \ x) {\n  return to_string(x.v);\n}"
   dependsOn: []
   isVerificationFile: false
   path: mod/modint.hpp
   requiredBy: []
-  timestamp: '2024-06-07 21:25:28+08:00'
+  timestamp: '2024-06-11 03:35:11+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: mod/modint.hpp
