@@ -121,3 +121,7 @@ int modint<0>::MOD = 998244353;
 using modint107 = modint<1000000007>;
 using modint998 = modint<998244353>;
 using modint000 = modint<0>;
+
+string to_string(mint x) {
+  return to_string(x.v);
+}
