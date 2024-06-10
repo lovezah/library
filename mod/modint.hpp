@@ -115,13 +115,14 @@ template <typename T> T pow(T a, int64_t b) {
   return r;
 }
 
+template <int P>
+string to_string(const modint<P> x) {
+  return to_string(x.v);
+}
+
 template<>
 int modint<0>::MOD = 998244353;
 
 using modint107 = modint<1000000007>;
 using modint998 = modint<998244353>;
 using modint000 = modint<0>;
-
-string to_string(mint x) {
-  return to_string(x.v);
-}
