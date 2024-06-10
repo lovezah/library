@@ -7,6 +7,9 @@ data:
       path: ds/fenwick.hpp
       title: ds/fenwick.hpp
     - icon: ':warning:'
+      path: ds/lazysegtree.hpp
+      title: ds/lazysegtree.hpp
+    - icon: ':warning:'
       path: ds/ordered_set.hpp
       title: ds/ordered_set.hpp
     - icon: ':warning:'
