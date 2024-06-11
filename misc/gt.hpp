@@ -4,9 +4,6 @@
 **/
 #include <bits/stdc++.h>
 
-#define all(v) (v).begin(), (v).end()
-#define len(v) ((int) (v).size())
-
 using namespace std;
 using int64 = int64_t;
 
