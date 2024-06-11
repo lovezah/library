@@ -60,6 +60,9 @@ struct segtree {
     int m = (l + r) / 2;
     return op(query(p * 2, l, m, ql, qr), query(p * 2 + 1, m, r, ql, qr));
   }
+  X all() {
+    return v[1];
+  }
   template <class F>
   int find_first(int p, int l, int r, int ql, int qr, F &f) {
     if (qr <= l || r <= ql) return -1;
