@@ -39,6 +39,9 @@ data:
     - icon: ':warning:'
       path: graph/graph.hpp
       title: graph/graph.hpp
+    - icon: ':warning:'
+      path: graph/scc.hpp
+      title: graph/scc.hpp
   - name: misc
     pages:
     - icon: ':warning:'
