@@ -5,7 +5,7 @@
 #include <bits/stdc++.h>
 
 using namespace std;
-using int64 = int64_t;
+using ll = int64_t;
 
 #ifdef LOCAL
 #include "debug.hpp"
