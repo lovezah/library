@@ -84,6 +84,9 @@ data:
 
     template <typename A> using pqg = priority_queue<A, vt<A>, greater<A>>;
 
+
+    const char nl = ''\n'';
+
     '
   code: '#define rng(i, a, n) for (int i = (a); i < (n); i++)
 
@@ -157,12 +160,15 @@ data:
 
     template <typename A> using pq = priority_queue<A>;
 
-    template <typename A> using pqg = priority_queue<A, vt<A>, greater<A>>;'
+    template <typename A> using pqg = priority_queue<A, vt<A>, greater<A>>;
+
+
+    const char nl = ''\n'';'
   dependsOn: []
   isVerificationFile: false
   path: misc/lazy.hpp
   requiredBy: []
-  timestamp: '2024-06-14 21:03:46+08:00'
+  timestamp: '2024-06-14 21:07:37+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: misc/lazy.hpp
