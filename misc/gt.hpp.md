@@ -20,7 +20,7 @@ data:
     \ than include guards\n"
   code: "/**\n *  author:  happymore\n *  created: $CURRENT_DATE.$CURRENT_MONTH.$CURRENT_YEAR\
     \ $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND\n**/\n#include <bits/stdc++.h>\n\
-    \nusing namespace std;\nusing int64 = int64_t;\n\n#ifdef LOCAL\n#include \"debug.hpp\"\
+    \nusing namespace std;\nusing ll = int64_t;\n\n#ifdef LOCAL\n#include \"debug.hpp\"\
     \n#else\n#define debug(...) (void)0\n#endif\n\nint main() {\n  ios::sync_with_stdio(false);\n\
     \  cin.tie(nullptr);\n  int tt;\n  cin >> tt;\n  while (tt--) {\n    ${0}\n  }\n\
     \  return 0;\n}"
@@ -28,7 +28,7 @@ data:
   isVerificationFile: false
   path: misc/gt.hpp
   requiredBy: []
-  timestamp: '2024-06-11 20:20:33+08:00'
+  timestamp: '2024-06-14 20:47:22+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: misc/gt.hpp
