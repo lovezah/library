@@ -54,8 +54,11 @@ data:
       path: misc/gt.hpp
       title: misc/gt.hpp
     - icon: ':warning:'
-      path: misc/rng.hpp
-      title: misc/rng.hpp
+      path: misc/lazy.hpp
+      title: misc/lazy.hpp
+    - icon: ':warning:'
+      path: misc/mt.hpp
+      title: misc/mt.hpp
   - name: mod
     pages:
     - icon: ':warning:'
