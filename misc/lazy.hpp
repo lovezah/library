@@ -18,7 +18,10 @@ using db = double;
 #define ins insert
 #define lb lower_bound
 #define ub upper_bound
+#define remDup(x) sort(all(x)), (x).resize(unique(all(x)) - x.begin())
 
+template <typename T, size_t S>
+using ar = array<T, S>;
 template <typename T>
 using vt = vector<T>;
 using vi = vt<int>;
