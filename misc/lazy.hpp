@@ -36,3 +36,5 @@ template <typename A, typename B> bool ckmax(A &a, B b) { return b > a ? a = b, 
 template <typename A, typename B> bool ckmin(A &a, B b) { return b < a ? a = b, true : false; }
 template <typename A> using pq = priority_queue<A>;
 template <typename A> using pqg = priority_queue<A, vt<A>, greater<A>>;
+
+const char nl = '\n';
