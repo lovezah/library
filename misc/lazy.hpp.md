@@ -48,6 +48,12 @@ data:
 
     #define ub upper_bound
 
+    #define remDup(x) sort(all(x)), (x).resize(unique(all(x)) - x.begin())
+
+
+    template <typename T, size_t S>
+
+    using ar = array<T, S>;
 
     template <typename T>
 
@@ -117,6 +123,12 @@ data:
 
     #define ub upper_bound
 
+    #define remDup(x) sort(all(x)), (x).resize(unique(all(x)) - x.begin())
+
+
+    template <typename T, size_t S>
+
+    using ar = array<T, S>;
 
     template <typename T>
 
@@ -150,7 +162,7 @@ data:
   isVerificationFile: false
   path: misc/lazy.hpp
   requiredBy: []
-  timestamp: '2024-06-14 20:57:00+08:00'
+  timestamp: '2024-06-14 21:03:46+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: misc/lazy.hpp
