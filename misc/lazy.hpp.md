@@ -10,13 +10,13 @@ data:
     links: []
   bundledCode: '#line 1 "misc/lazy.hpp"
 
-    #define rng(i, a, n) for (int i = (a); i < (n); i++)
+    #define FOR(i, a, n) for (int i = (a); i < (n); i++)
 
-    #define rep(i, n) rng(i, 0, n)
+    #define F0R(i, n) FOR(i, 0, n)
 
-    #define gnr(i, a, n) for (int i = (n) - 1; i >= a; i--)
+    #define FORd(i, a, n) for (int i = (n) - 1; i >= a; i--)
 
-    #define per(i, n) gnr(i, 0, n)
+    #define F0Rd(i, n) FORd(i, 0, n)
 
     #define trav(a, v) for (auto &a : v)
 
@@ -88,13 +88,13 @@ data:
     const char nl = ''\n'';
 
     '
-  code: '#define rng(i, a, n) for (int i = (a); i < (n); i++)
+  code: '#define FOR(i, a, n) for (int i = (a); i < (n); i++)
 
-    #define rep(i, n) rng(i, 0, n)
+    #define F0R(i, n) FOR(i, 0, n)
 
-    #define gnr(i, a, n) for (int i = (n) - 1; i >= a; i--)
+    #define FORd(i, a, n) for (int i = (n) - 1; i >= a; i--)
 
-    #define per(i, n) gnr(i, 0, n)
+    #define F0Rd(i, n) FORd(i, 0, n)
 
     #define trav(a, v) for (auto &a : v)
 
@@ -168,7 +168,7 @@ data:
   isVerificationFile: false
   path: misc/lazy.hpp
   requiredBy: []
-  timestamp: '2024-06-14 21:07:37+08:00'
+  timestamp: '2024-06-14 21:08:40+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: misc/lazy.hpp
