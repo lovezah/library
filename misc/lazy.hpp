@@ -1,7 +1,7 @@
-#define rng(i, a, n) for (int i = (a); i < (n); i++)
-#define rep(i, n) rng(i, 0, n)
-#define gnr(i, a, n) for (int i = (n) - 1; i >= a; i--)
-#define per(i, n) gnr(i, 0, n)
+#define FOR(i, a, n) for (int i = (a); i < (n); i++)
+#define F0R(i, n) FOR(i, 0, n)
+#define FORd(i, a, n) for (int i = (n) - 1; i >= a; i--)
+#define F0Rd(i, n) FORd(i, 0, n)
 #define trav(a, v) for (auto &a : v)
 
 using pi = pair<int, int>;
