@@ -26,25 +26,25 @@ data:
     \ - 1; i >= a; i--)\n#define F0Rd(i, n) FORd(i, 0, n)\n#define trav(a, v) for\
     \ (auto &a : v)\n\nusing ll = int64_t;\nusing pi = pair<int, int>;\nusing pl =\
     \ pair<ll, ll>;\nusing pli = pair<ll, int>;\nusing db = double;\n\n#define pb\
-    \ push_back\n#define mp make_pair\n#define f first\n#define s second\n#define\
-    \ si(x) ((int) (x).size())\n#define all(x) (x).begin(), (x).end()\n#define ins\
-    \ insert\n#define lb lower_bound\n#define ub upper_bound\n#define remDup(x) sort(all(x)),\
-    \ (x).resize(unique(all(x)) - x.begin())\n\ntemplate <typename T, size_t S>\n\
-    using ar = array<T, S>;\ntemplate <typename T>\nusing vt = vector<T>;\nusing vi\
-    \ = vt<int>;\nusing vl = vt<ll>;\nusing vb = vt<bool>;\nusing vd = vt<db>;\nusing\
-    \ vpi = vt<pi>;\nusing vpl = vt<pl>;\nusing vpli = vt<pli>;\n\ntemplate <typename\
-    \ A, typename B> bool ckmax(A &a, B b) { return b > a ? a = b, true : false; }\n\
-    template <typename A, typename B> bool ckmin(A &a, B b) { return b < a ? a = b,\
-    \ true : false; }\ntemplate <typename A> using pq = priority_queue<A>;\ntemplate\
-    \ <typename A> using pqg = priority_queue<A, vt<A>, greater<A>>;\n\nconst char\
-    \ nl = '\\n';\n\nvoid solve() {\n  ${0}\n}\n\nint main() {\n  ios::sync_with_stdio(false);\n\
+    \ push_back\n#define eb emplace_back\n#define mp make_pair\n#define f first\n\
+    #define s second\n#define si(x) ((int) (x).size())\n#define all(x) (x).begin(),\
+    \ (x).end()\n#define ins insert\n#define lb lower_bound\n#define ub upper_bound\n\
+    #define remDup(x) sort(all(x)), (x).resize(unique(all(x)) - x.begin())\n\ntemplate\
+    \ <typename T, size_t S>\nusing ar = array<T, S>;\ntemplate <typename T>\nusing\
+    \ vt = vector<T>;\nusing vi = vt<int>;\nusing vl = vt<ll>;\nusing vb = vt<bool>;\n\
+    using vd = vt<db>;\nusing vpi = vt<pi>;\nusing vpl = vt<pl>;\nusing vpli = vt<pli>;\n\
+    \ntemplate <typename A, typename B> bool ckmax(A &a, B b) { return b > a ? a =\
+    \ b, true : false; }\ntemplate <typename A, typename B> bool ckmin(A &a, B b)\
+    \ { return b < a ? a = b, true : false; }\ntemplate <typename A> using pq = priority_queue<A>;\n\
+    template <typename A> using pqg = priority_queue<A, vt<A>, greater<A>>;\n\nconst\
+    \ char nl = '\\n';\n\nvoid solve() {\n  ${0}\n}\n\nint main() {\n  ios::sync_with_stdio(false);\n\
     \  cin.tie(nullptr);\n  int T = 1;\n  // cin >> T;\n  F0R(i, T) solve();\n  return\
     \ 0;\n}"
   dependsOn: []
   isVerificationFile: false
   path: misc/gs.hpp
   requiredBy: []
-  timestamp: '2024-06-18 21:04:47+08:00'
+  timestamp: '2024-06-18 21:43:23+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: misc/gs.hpp

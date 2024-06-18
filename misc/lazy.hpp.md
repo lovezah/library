@@ -32,6 +32,8 @@ data:
 
     #define pb push_back
 
+    #define eb emplace_back
+
     #define mp make_pair
 
     #define f first
@@ -110,6 +112,8 @@ data:
 
     #define pb push_back
 
+    #define eb emplace_back
+
     #define mp make_pair
 
     #define f first
@@ -168,7 +172,7 @@ data:
   isVerificationFile: false
   path: misc/lazy.hpp
   requiredBy: []
-  timestamp: '2024-06-14 21:08:40+08:00'
+  timestamp: '2024-06-18 21:43:23+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: misc/lazy.hpp
