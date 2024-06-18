@@ -51,6 +51,9 @@ data:
       path: misc/g1.hpp
       title: misc/g1.hpp
     - icon: ':warning:'
+      path: misc/gs.hpp
+      title: misc/gs.hpp
+    - icon: ':warning:'
       path: misc/gt.hpp
       title: misc/gt.hpp
     - icon: ':warning:'
