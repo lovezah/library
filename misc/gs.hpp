@@ -25,6 +25,7 @@ using pli = pair<ll, int>;
 using db = double;
 
 #define pb push_back
+#define eb emplace_back
 #define mp make_pair
 #define f first
 #define s second
