@@ -1,4 +1,4 @@
-template <typename T = int64_t>
+template <typename T = long long>
 struct flow {
   struct edge {
     int to;

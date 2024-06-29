@@ -1,12 +1,12 @@
 template <class X, X(* op)(X, X), X (*e)(), class F, X (*mapping)(X, F), F (*composition)(F, F), F (*id)()>
-struct lazysegtree {
+struct lazy_segtree {
   int n;
   vector<X> v;
   vector<F> lz;
-  lazysegtree(int m = 0) {
+  lazy_segtree(int m = 0) {
     init(vector<X>(m, e()));
   }
-  lazysegtree(const vector<X> &dat) {
+  lazy_segtree(const vector<X> &dat) {
     init(dat);
   }
   void init(vector<X> dat) {

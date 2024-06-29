@@ -1,11 +1,7 @@
-/**
- *  author:  happymore
- *  created: $CURRENT_DATE.$CURRENT_MONTH.$CURRENT_YEAR $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND
-**/
 #include <bits/stdc++.h>
 
 using namespace std;
-using ll = int64_t;
+using ll = long long;
 
 #ifdef LOCAL
 #include "debug.hpp"
