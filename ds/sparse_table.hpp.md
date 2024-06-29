@@ -37,12 +37,12 @@ data:
     \  }\n  int query_index(int x, int y) {\n    assert(0 <= x && x < y && y <= n);\n\
     \    int level = highest_bit(y - x);\n    return better_index(f[level][x], f[level][y\
     \ - (1 << level)]);\n  }\n  T query_value(int x, int y) {\n    return vals[query_index(x,\
-    \ y)];\n  }\n};"
+    \ y)];\n  }\n};\n"
   dependsOn: []
   isVerificationFile: false
   path: ds/sparse_table.hpp
   requiredBy: []
-  timestamp: '2024-06-07 21:25:28+08:00'
+  timestamp: '2024-06-29 12:36:30+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: ds/sparse_table.hpp

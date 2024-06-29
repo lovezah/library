@@ -8,7 +8,7 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"flows/flow.hpp\"\ntemplate <typename T = int64_t>\nstruct\
+  bundledCode: "#line 1 \"flows/flow.hpp\"\ntemplate <typename T = long long>\nstruct\
     \ flow {\n  struct edge {\n    int to;\n    T cap;\n    edge(int _to, T _cap)\
     \ : to(_to), cap(_cap) {}\n  };\n  int n;\n  vector<int> cur, lev;\n  vector<edge>\
     \ edges;\n  vector<vector<int>> g;\n  flow(int _n) : n(_n) {\n    g.resize(n);\n\
@@ -29,7 +29,7 @@ data:
     \ f - r;\n  }\n  T dinic(int s, int t) {\n    T ans = 0;\n    while (bfs(s, t))\
     \ {\n      cur.assign(n, 0);\n      ans += dfs(s, t, std::numeric_limits<T>::max());\n\
     \    }\n    return ans;\n  }\n};\n"
-  code: "template <typename T = int64_t>\nstruct flow {\n  struct edge {\n    int\
+  code: "template <typename T = long long>\nstruct flow {\n  struct edge {\n    int\
     \ to;\n    T cap;\n    edge(int _to, T _cap) : to(_to), cap(_cap) {}\n  };\n \
     \ int n;\n  vector<int> cur, lev;\n  vector<edge> edges;\n  vector<vector<int>>\
     \ g;\n  flow(int _n) : n(_n) {\n    g.resize(n);\n  }\n  void add(int from, int\
@@ -54,7 +54,7 @@ data:
   isVerificationFile: false
   path: flows/flow.hpp
   requiredBy: []
-  timestamp: '2024-05-24 16:43:57+08:00'
+  timestamp: '2024-06-29 12:36:30+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: flows/flow.hpp

@@ -8,12 +8,12 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"ds/lazysegtree.hpp\"\ntemplate <class X, X(* op)(X, X),\
+  bundledCode: "#line 1 \"ds/lazy_segtree.hpp\"\ntemplate <class X, X(* op)(X, X),\
     \ X (*e)(), class F, X (*mapping)(X, F), F (*composition)(F, F), F (*id)()>\n\
-    struct lazysegtree {\n  int n;\n  vector<X> v;\n  vector<F> lz;\n  lazysegtree(int\
-    \ m = 0) {\n    init(vector<X>(m, e()));\n  }\n  lazysegtree(const vector<X> &dat)\
-    \ {\n    init(dat);\n  }\n  void init(vector<X> dat) {\n    n = len(dat);\n  \
-    \  v.assign(4 << (int)(log2(n)), e());\n    lz.assign(4 << (int)(log2(n)), id());\n\
+    struct lazy_segtree {\n  int n;\n  vector<X> v;\n  vector<F> lz;\n  lazy_segtree(int\
+    \ m = 0) {\n    init(vector<X>(m, e()));\n  }\n  lazy_segtree(const vector<X>\
+    \ &dat) {\n    init(dat);\n  }\n  void init(vector<X> dat) {\n    n = len(dat);\n\
+    \    v.assign(4 << (int)(log2(n)), e());\n    lz.assign(4 << (int)(log2(n)), id());\n\
     \    function<void(int, int, int)> build = [&](int p, int l, int r) {\n      if\
     \ (r - l == 1) {\n        v[p] = dat[l];\n        return;\n      }\n      int\
     \ m = (l + r) / 2;\n      build(p * 2, l, m);\n      build(p * 2 + 1, m, r);\n\
@@ -60,9 +60,9 @@ data:
     \ &f) {\n    assert(0 <= l && l < r && r <= n);\n    return find_last(1, 0, n,\
     \ l, r, f);\n  }\n};\n"
   code: "template <class X, X(* op)(X, X), X (*e)(), class F, X (*mapping)(X, F),\
-    \ F (*composition)(F, F), F (*id)()>\nstruct lazysegtree {\n  int n;\n  vector<X>\
-    \ v;\n  vector<F> lz;\n  lazysegtree(int m = 0) {\n    init(vector<X>(m, e()));\n\
-    \  }\n  lazysegtree(const vector<X> &dat) {\n    init(dat);\n  }\n  void init(vector<X>\
+    \ F (*composition)(F, F), F (*id)()>\nstruct lazy_segtree {\n  int n;\n  vector<X>\
+    \ v;\n  vector<F> lz;\n  lazy_segtree(int m = 0) {\n    init(vector<X>(m, e()));\n\
+    \  }\n  lazy_segtree(const vector<X> &dat) {\n    init(dat);\n  }\n  void init(vector<X>\
     \ dat) {\n    n = len(dat);\n    v.assign(4 << (int)(log2(n)), e());\n    lz.assign(4\
     \ << (int)(log2(n)), id());\n    function<void(int, int, int)> build = [&](int\
     \ p, int l, int r) {\n      if (r - l == 1) {\n        v[p] = dat[l];\n      \
@@ -111,15 +111,15 @@ data:
     \ 0, n, l, r, f);\n  }\n};\n"
   dependsOn: []
   isVerificationFile: false
-  path: ds/lazysegtree.hpp
+  path: ds/lazy_segtree.hpp
   requiredBy: []
-  timestamp: '2024-06-11 04:33:23+08:00'
+  timestamp: '2024-06-29 12:36:30+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: ds/lazysegtree.hpp
+documentation_of: ds/lazy_segtree.hpp
 layout: document
 redirect_from:
-- /library/ds/lazysegtree.hpp
-- /library/ds/lazysegtree.hpp.html
-title: ds/lazysegtree.hpp
+- /library/ds/lazy_segtree.hpp
+- /library/ds/lazy_segtree.hpp.html
+title: ds/lazy_segtree.hpp
 ---

@@ -7,8 +7,8 @@ data:
       path: ds/fenwick.hpp
       title: ds/fenwick.hpp
     - icon: ':warning:'
-      path: ds/lazysegtree.hpp
-      title: ds/lazysegtree.hpp
+      path: ds/lazy_segtree.hpp
+      title: ds/lazy_segtree.hpp
     - icon: ':warning:'
       path: ds/ordered_set.hpp
       title: ds/ordered_set.hpp
@@ -34,14 +34,11 @@ data:
   - name: graph
     pages:
     - icon: ':warning:'
-      path: graph/floyd.hpp
-      title: graph/floyd.hpp
+      path: graph/find_bridge.hpp
+      title: graph/find_bridge.hpp
     - icon: ':warning:'
-      path: graph/graph.hpp
-      title: graph/graph.hpp
-    - icon: ':warning:'
-      path: graph/scc.hpp
-      title: graph/scc.hpp
+      path: graph/find_scc.hpp
+      title: graph/find_scc.hpp
   - name: misc
     pages:
     - icon: ':warning:'
@@ -51,17 +48,11 @@ data:
       path: misc/g1.hpp
       title: misc/g1.hpp
     - icon: ':warning:'
-      path: misc/gs.hpp
-      title: misc/gs.hpp
-    - icon: ':warning:'
       path: misc/gt.hpp
       title: misc/gt.hpp
     - icon: ':warning:'
-      path: misc/lazy.hpp
-      title: misc/lazy.hpp
-    - icon: ':warning:'
-      path: misc/mt.hpp
-      title: misc/mt.hpp
+      path: misc/rng.hpp
+      title: misc/rng.hpp
   - name: mod
     pages:
     - icon: ':warning:'
