@@ -31,6 +31,11 @@ data:
     - icon: ':warning:'
       path: generate_snippets.py
       title: generate_snippets.py
+  - name: geo
+    pages:
+    - icon: ':warning:'
+      path: geo/point.hpp
+      title: geo/point.hpp
   - name: graph
     pages:
     - icon: ':warning:'
