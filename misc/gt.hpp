@@ -16,5 +16,4 @@ int main() {
   while (tt--) {
     ${0}
   }
-  return 0;
 }
