@@ -39,6 +39,9 @@ data:
   - name: graph
     pages:
     - icon: ':warning:'
+      path: graph/bellman_ford.hpp
+      title: graph/bellman_ford.hpp
+    - icon: ':warning:'
       path: graph/find_bridge.hpp
       title: graph/find_bridge.hpp
     - icon: ':warning:'
