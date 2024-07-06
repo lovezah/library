@@ -21,12 +21,12 @@ data:
   code: "#include <bits/stdc++.h>\n\nusing namespace std;\n\n#ifdef LOCAL\n#include\
     \ \"debug.hpp\"\n#else\n#define debug(...) (void)0\n#endif\n\nint main() {\n \
     \ ios::sync_with_stdio(false);\n  cin.tie(nullptr);\n  int tt;\n  cin >> tt;\n\
-    \  while (tt--) {\n    ${0}\n  }\n  return 0;\n}"
+    \  while (tt--) {\n    ${0}\n  }\n}"
   dependsOn: []
   isVerificationFile: false
   path: misc/gt.hpp
   requiredBy: []
-  timestamp: '2024-06-29 12:58:23+08:00'
+  timestamp: '2024-07-06 15:12:38+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: misc/gt.hpp

@@ -47,6 +47,9 @@ data:
   - name: misc
     pages:
     - icon: ':warning:'
+      path: misc/beginend.hpp
+      title: misc/beginend.hpp
+    - icon: ':warning:'
       path: misc/debug.hpp
       title: misc/debug.hpp
     - icon: ':warning:'
@@ -58,11 +61,14 @@ data:
     - icon: ':warning:'
       path: misc/rng.hpp
       title: misc/rng.hpp
+    - icon: ':warning:'
+      path: misc/setminmax.hpp
+      title: misc/setminmax.hpp
+    - icon: ':warning:'
+      path: misc/yc.hpp
+      title: misc/yc.hpp
   - name: mod
     pages:
-    - icon: ':warning:'
-      path: mod/binomial.hpp
-      title: mod/binomial.hpp
     - icon: ':warning:'
       path: mod/modint.hpp
       title: mod/modint.hpp
