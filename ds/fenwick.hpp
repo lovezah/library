@@ -23,7 +23,6 @@ struct fenwick {
     return query(r) - query(l);
   }
   T query_suffix(int l) {
-    assert(0 <= l && l <= r);
     return query(n) - query(l);
   }
   int kth(const T &k) {
