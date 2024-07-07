@@ -7,11 +7,11 @@
 #define trav(a, x) for(auto& a : x)
 #define all(x) x.begin(), x.end()
 #define sz(x) (int)(x).size()
-typedef long long ll;
-typedef pair<int, int> pii;
-typedef vector<int> vi;
+using ll = int64_t;
+using pii = pair<int, int>;
+using vi = vector<int>;
 
-const ll inf = LLONG_MAX;
+const ll inf = numeric_limits<int64_t>::max();
 struct Ed { int a, b, w; int s() { return a < b ? a : -a; }};
 struct Node { ll dist = inf; int prev = -1; };
 
