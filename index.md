@@ -73,6 +73,9 @@ data:
   - name: mod
     pages:
     - icon: ':warning:'
+      path: mod/binom.hpp
+      title: mod/binom.hpp
+    - icon: ':warning:'
       path: mod/modint.hpp
       title: mod/modint.hpp
   - name: nt
