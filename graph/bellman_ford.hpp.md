@@ -14,37 +14,37 @@ data:
     \  docs  : Unreachable nodes get dist = inf; nodes reachable through negative-weight\
     \ cycles get dist = -inf.\n*/\n#define rep(i, a, b) for(int i = a; i < (b); ++i)\n\
     #define trav(a, x) for(auto& a : x)\n#define all(x) x.begin(), x.end()\n#define\
-    \ sz(x) (int)(x).size()\ntypedef long long ll;\ntypedef pair<int, int> pii;\n\
-    typedef vector<int> vi;\n\nconst ll inf = LLONG_MAX;\nstruct Ed { int a, b, w;\
-    \ int s() { return a < b ? a : -a; }};\nstruct Node { ll dist = inf; int prev\
-    \ = -1; };\n\nvoid bellman_ford(vector<Node>& nodes, vector<Ed>& eds, int s) {\n\
-    \tnodes[s].dist = 0;\n\tsort(all(eds), [](Ed a, Ed b) { return a.s() < b.s();\
-    \ });\n\n\tint lim = sz(nodes) / 2 + 2; // /3+100 with shuffled vertices\n\trep(i,0,lim)\
-    \ for (Ed ed : eds) {\n\t\tNode cur = nodes[ed.a], &dest = nodes[ed.b];\n\t\t\
-    if (abs(cur.dist) == inf) continue;\n\t\tll d = cur.dist + ed.w;\n\t\tif (d <\
-    \ dest.dist) {\n\t\t\tdest.prev = ed.a;\n\t\t\tdest.dist = (i < lim-1 ? d : -inf);\n\
-    \t\t}\n\t}\n\trep(i,0,lim) for (Ed e : eds) {\n\t\tif (nodes[e.a].dist == -inf)\n\
-    \t\t\tnodes[e.b].dist = -inf;\n\t}\n}\n"
+    \ sz(x) (int)(x).size()\nusing ll = int64_t;\nusing pii = pair<int, int>;\nusing\
+    \ vi = vector<int>;\n\nconst ll inf = numeric_limits<int64_t>::max();\nstruct\
+    \ Ed { int a, b, w; int s() { return a < b ? a : -a; }};\nstruct Node { ll dist\
+    \ = inf; int prev = -1; };\n\nvoid bellman_ford(vector<Node>& nodes, vector<Ed>&\
+    \ eds, int s) {\n\tnodes[s].dist = 0;\n\tsort(all(eds), [](Ed a, Ed b) { return\
+    \ a.s() < b.s(); });\n\n\tint lim = sz(nodes) / 2 + 2; // /3+100 with shuffled\
+    \ vertices\n\trep(i,0,lim) for (Ed ed : eds) {\n\t\tNode cur = nodes[ed.a], &dest\
+    \ = nodes[ed.b];\n\t\tif (abs(cur.dist) == inf) continue;\n\t\tll d = cur.dist\
+    \ + ed.w;\n\t\tif (d < dest.dist) {\n\t\t\tdest.prev = ed.a;\n\t\t\tdest.dist\
+    \ = (i < lim-1 ? d : -inf);\n\t\t}\n\t}\n\trep(i,0,lim) for (Ed e : eds) {\n\t\
+    \tif (nodes[e.a].dist == -inf)\n\t\t\tnodes[e.b].dist = -inf;\n\t}\n}\n"
   code: "/*\n  source: template from kactl\n  link  : https://github.com/kth-competitive-programming/kactl/blob/main/content/graph/BellmanFord.h\n\
     \  docs  : Unreachable nodes get dist = inf; nodes reachable through negative-weight\
     \ cycles get dist = -inf.\n*/\n#define rep(i, a, b) for(int i = a; i < (b); ++i)\n\
     #define trav(a, x) for(auto& a : x)\n#define all(x) x.begin(), x.end()\n#define\
-    \ sz(x) (int)(x).size()\ntypedef long long ll;\ntypedef pair<int, int> pii;\n\
-    typedef vector<int> vi;\n\nconst ll inf = LLONG_MAX;\nstruct Ed { int a, b, w;\
-    \ int s() { return a < b ? a : -a; }};\nstruct Node { ll dist = inf; int prev\
-    \ = -1; };\n\nvoid bellman_ford(vector<Node>& nodes, vector<Ed>& eds, int s) {\n\
-    \tnodes[s].dist = 0;\n\tsort(all(eds), [](Ed a, Ed b) { return a.s() < b.s();\
-    \ });\n\n\tint lim = sz(nodes) / 2 + 2; // /3+100 with shuffled vertices\n\trep(i,0,lim)\
-    \ for (Ed ed : eds) {\n\t\tNode cur = nodes[ed.a], &dest = nodes[ed.b];\n\t\t\
-    if (abs(cur.dist) == inf) continue;\n\t\tll d = cur.dist + ed.w;\n\t\tif (d <\
-    \ dest.dist) {\n\t\t\tdest.prev = ed.a;\n\t\t\tdest.dist = (i < lim-1 ? d : -inf);\n\
-    \t\t}\n\t}\n\trep(i,0,lim) for (Ed e : eds) {\n\t\tif (nodes[e.a].dist == -inf)\n\
-    \t\t\tnodes[e.b].dist = -inf;\n\t}\n}"
+    \ sz(x) (int)(x).size()\nusing ll = int64_t;\nusing pii = pair<int, int>;\nusing\
+    \ vi = vector<int>;\n\nconst ll inf = numeric_limits<int64_t>::max();\nstruct\
+    \ Ed { int a, b, w; int s() { return a < b ? a : -a; }};\nstruct Node { ll dist\
+    \ = inf; int prev = -1; };\n\nvoid bellman_ford(vector<Node>& nodes, vector<Ed>&\
+    \ eds, int s) {\n\tnodes[s].dist = 0;\n\tsort(all(eds), [](Ed a, Ed b) { return\
+    \ a.s() < b.s(); });\n\n\tint lim = sz(nodes) / 2 + 2; // /3+100 with shuffled\
+    \ vertices\n\trep(i,0,lim) for (Ed ed : eds) {\n\t\tNode cur = nodes[ed.a], &dest\
+    \ = nodes[ed.b];\n\t\tif (abs(cur.dist) == inf) continue;\n\t\tll d = cur.dist\
+    \ + ed.w;\n\t\tif (d < dest.dist) {\n\t\t\tdest.prev = ed.a;\n\t\t\tdest.dist\
+    \ = (i < lim-1 ? d : -inf);\n\t\t}\n\t}\n\trep(i,0,lim) for (Ed e : eds) {\n\t\
+    \tif (nodes[e.a].dist == -inf)\n\t\t\tnodes[e.b].dist = -inf;\n\t}\n}"
   dependsOn: []
   isVerificationFile: false
   path: graph/bellman_ford.hpp
   requiredBy: []
-  timestamp: '2024-07-07 00:21:01+08:00'
+  timestamp: '2024-07-07 13:54:10+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: graph/bellman_ford.hpp
