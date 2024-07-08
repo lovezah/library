@@ -1,5 +1,5 @@
 /*
-  source: template from kactl
+  source: kactl
   link  : https://github.com/kth-competitive-programming/kactl/blob/main/content/graph/BellmanFord.h
   docs  : Unreachable nodes get dist = inf; nodes reachable through negative-weight cycles get dist = -inf.
 */
