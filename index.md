@@ -53,6 +53,9 @@ data:
       path: misc/beginend.hpp
       title: misc/beginend.hpp
     - icon: ':warning:'
+      path: misc/count_pairs.hpp
+      title: misc/count_pairs.hpp
+    - icon: ':warning:'
       path: misc/debug.hpp
       title: misc/debug.hpp
     - icon: ':warning:'

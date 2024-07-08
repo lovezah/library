@@ -9,8 +9,8 @@ data:
   attributes:
     links:
     - https://github.com/kth-competitive-programming/kactl/blob/main/content/graph/BellmanFord.h
-  bundledCode: "#line 1 \"graph/bellman_ford.hpp\"\n/*\n  source: template from kactl\n\
-    \  link  : https://github.com/kth-competitive-programming/kactl/blob/main/content/graph/BellmanFord.h\n\
+  bundledCode: "#line 1 \"graph/bellman_ford.hpp\"\n/*\n  source: kactl\n  link  :\
+    \ https://github.com/kth-competitive-programming/kactl/blob/main/content/graph/BellmanFord.h\n\
     \  docs  : Unreachable nodes get dist = inf; nodes reachable through negative-weight\
     \ cycles get dist = -inf.\n*/\n#define rep(i, a, b) for(int i = a; i < (b); ++i)\n\
     #define trav(a, x) for(auto& a : x)\n#define all(x) x.begin(), x.end()\n#define\
@@ -25,7 +25,7 @@ data:
     \ + ed.w;\n\t\tif (d < dest.dist) {\n\t\t\tdest.prev = ed.a;\n\t\t\tdest.dist\
     \ = (i < lim-1 ? d : -inf);\n\t\t}\n\t}\n\trep(i,0,lim) for (Ed e : eds) {\n\t\
     \tif (nodes[e.a].dist == -inf)\n\t\t\tnodes[e.b].dist = -inf;\n\t}\n}\n"
-  code: "/*\n  source: template from kactl\n  link  : https://github.com/kth-competitive-programming/kactl/blob/main/content/graph/BellmanFord.h\n\
+  code: "/*\n  source: kactl\n  link  : https://github.com/kth-competitive-programming/kactl/blob/main/content/graph/BellmanFord.h\n\
     \  docs  : Unreachable nodes get dist = inf; nodes reachable through negative-weight\
     \ cycles get dist = -inf.\n*/\n#define rep(i, a, b) for(int i = a; i < (b); ++i)\n\
     #define trav(a, x) for(auto& a : x)\n#define all(x) x.begin(), x.end()\n#define\
@@ -44,7 +44,7 @@ data:
   isVerificationFile: false
   path: graph/bellman_ford.hpp
   requiredBy: []
-  timestamp: '2024-07-07 13:54:10+08:00'
+  timestamp: '2024-07-08 13:55:24+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: graph/bellman_ford.hpp
