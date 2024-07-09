@@ -8,25 +8,17 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.12.4/x64/lib/python3.12/site-packages/onlinejudge_verify/documentation/build.py\"\
-    , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
-    \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n          \
-    \         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\
-    \  File \"/opt/hostedtoolcache/Python/3.12.4/x64/lib/python3.12/site-packages/onlinejudge_verify/languages/cplusplus.py\"\
-    , line 187, in bundle\n    bundler.update(path)\n  File \"/opt/hostedtoolcache/Python/3.12.4/x64/lib/python3.12/site-packages/onlinejudge_verify/languages/cplusplus_bundle.py\"\
-    , line 400, in update\n    raise BundleErrorAt(path, i + 1, \"unable to process\
-    \ #include in #if / #ifdef / #ifndef other than include guards\")\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt:\
-    \ misc/gt.hpp: line 6: unable to process #include in #if / #ifdef / #ifndef other\
-    \ than include guards\n"
-  code: "#include <bits/stdc++.h>\n\nusing namespace std;\n\n#ifdef LOCAL\n#include\
-    \ \"debug.hpp\"\n#else\n#define debug(...) (void)0\n#endif\n\nint main() {\n \
-    \ ios::sync_with_stdio(false);\n  cin.tie(nullptr);\n  int tt;\n  cin >> tt;\n\
-    \  while (tt--) {\n    ${0}\n  }\n}"
+  bundledCode: "#line 1 \"misc/gt.hpp\"\n#include <bits/stdc++.h>\n\nusing namespace\
+    \ std;\n\nint main() {\n  ios::sync_with_stdio(false);\n  cin.tie(nullptr);\n\
+    \  int tt;\n  cin >> tt;\n  while (tt--) {\n    ${0}\n  }\n}\n"
+  code: "#include <bits/stdc++.h>\n\nusing namespace std;\n\nint main() {\n  ios::sync_with_stdio(false);\n\
+    \  cin.tie(nullptr);\n  int tt;\n  cin >> tt;\n  while (tt--) {\n    ${0}\n  }\n\
+    }"
   dependsOn: []
   isVerificationFile: false
   path: misc/gt.hpp
   requiredBy: []
-  timestamp: '2024-07-06 15:12:38+08:00'
+  timestamp: '2024-07-09 11:07:51+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: misc/gt.hpp
