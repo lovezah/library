@@ -9,16 +9,17 @@ data:
   attributes:
     links: []
   bundledCode: "#line 1 \"misc/gt.hpp\"\n#include <bits/stdc++.h>\n\nusing namespace\
-    \ std;\n\nint main() {\n  ios::sync_with_stdio(false);\n  cin.tie(nullptr);\n\
-    \  int tt;\n  cin >> tt;\n  while (tt--) {\n    ${0}\n  }\n}\n"
-  code: "#include <bits/stdc++.h>\n\nusing namespace std;\n\nint main() {\n  ios::sync_with_stdio(false);\n\
+    \ std;\nusing ll = long long;\n\nint main() {\n  ios::sync_with_stdio(false);\n\
     \  cin.tie(nullptr);\n  int tt;\n  cin >> tt;\n  while (tt--) {\n    ${0}\n  }\n\
-    }"
+    }\n"
+  code: "#include <bits/stdc++.h>\n\nusing namespace std;\nusing ll = long long;\n\
+    \nint main() {\n  ios::sync_with_stdio(false);\n  cin.tie(nullptr);\n  int tt;\n\
+    \  cin >> tt;\n  while (tt--) {\n    ${0}\n  }\n}"
   dependsOn: []
   isVerificationFile: false
   path: misc/gt.hpp
   requiredBy: []
-  timestamp: '2024-07-09 11:07:51+08:00'
+  timestamp: '2024-07-09 11:08:44+08:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: misc/gt.hpp
