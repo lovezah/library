@@ -4,11 +4,20 @@ data:
   - name: ds
     pages:
     - icon: ':warning:'
+      path: ds/atcoder_lazysegtree.hpp
+      title: ds/atcoder_lazysegtree.hpp
+    - icon: ':warning:'
+      path: ds/atcoder_segtree.hpp
+      title: ds/atcoder_segtree.hpp
+    - icon: ':warning:'
       path: ds/fenwick.hpp
       title: ds/fenwick.hpp
     - icon: ':warning:'
       path: ds/lazy_segtree.hpp
       title: ds/lazy_segtree.hpp
+    - icon: ':warning:'
+      path: ds/min_pq.hpp
+      title: ds/min_pq.hpp
     - icon: ':warning:'
       path: ds/ordered_set.hpp
       title: ds/ordered_set.hpp
