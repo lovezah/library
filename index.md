@@ -95,6 +95,9 @@ data:
   - name: strings
     pages:
     - icon: ':warning:'
+      path: strings/AhoCorasick.hpp
+      title: strings/AhoCorasick.hpp
+    - icon: ':warning:'
       path: strings/rolling_hash.hpp
       title: strings/rolling_hash.hpp
     - icon: ':warning:'
