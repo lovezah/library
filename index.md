@@ -101,6 +101,9 @@ data:
       path: strings/rolling_hash.hpp
       title: strings/rolling_hash.hpp
     - icon: ':warning:'
+      path: strings/xudyh_AhoCorasick.hpp
+      title: strings/xudyh_AhoCorasick.hpp
+    - icon: ':warning:'
       path: strings/z_function.hpp
       title: strings/z_function.hpp
   verificationCategories: []
