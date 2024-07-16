@@ -90,6 +90,9 @@ data:
   - name: nt
     pages:
     - icon: ':warning:'
+      path: nt/factor.hpp
+      title: nt/factor.hpp
+    - icon: ':warning:'
       path: nt/sieve.hpp
       title: nt/sieve.hpp
   - name: strings
